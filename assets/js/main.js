@@ -121,6 +121,7 @@ const nameInput = document.querySelector("#user-name1");
 const nameInput2 = document.querySelector("#user-name2");
 const emailInput = document.querySelector("#user-email");
 const phoneInput = document.querySelector("#user-phone");
+const msgInput = document.querySelector("#user-message");
 
 // get data from EmailJS
 const publicKey = "KnCU0selKCpZGVcQn";
@@ -139,6 +140,7 @@ contactForm.addEventListener("submit", (e) => {
     name2: nameInput2.value,
     email: emailInput.value,
     phone: phoneInput.value,
+    msg: msgInput.value,
   };
   emailjs.send(serviceID, templateID, inputFields).then(
     () => {
@@ -147,6 +149,7 @@ contactForm.addEventListener("submit", (e) => {
       nameInput2.value = "";
       emailInput.value = "";
       phoneInput.value = "";
+      msgInput.value = "";
       // Display success notification
       alert("Mesaj trimis cu succes!");
       // Reset button text after a delay (e.g., 2000 milliseconds or 2 seconds)
