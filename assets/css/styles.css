@@ -2626,3 +2626,33 @@ font-size: var(--h3-font-size);
 .no-text{
   display: none;
 }
+
+/* GALLERY 2*/
+
+/* body {
+  background-color: #000;
+  margin: 0;
+  overflow: hidden;
+} */
+
+canvas {
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+}
+
+
+
+#container1 {
+  position: relative !important;
+  width: 768px;
+  height: 485px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  margin-top: 2rem;
+}
