@@ -40,12 +40,12 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
             integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
             crossorigin="anonymous" />
-        </head>
+</head>
         
-        <body>
+<body>
 
-    </head>
-    <body>
+</head>
+<body>
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
         <!--==================== HEADER ====================-->
@@ -71,7 +71,7 @@
                         </li>
                         
                         <li class="nav__item">
-                            <a href="#locatie" class="nav__link ">Locație</a>
+                            <a href="#contact" class="nav__link ">Contact</a>
                         </li>
                         
                         <div class="nav__link">
@@ -116,7 +116,7 @@
                         
                     </div>  -->
                 </div>
-            </section>
+</section>
 
            
 
@@ -312,11 +312,7 @@
             <td class="td-i">Abonament lunar și recurent!</td>
 
         </tr>
-        <tr>
-            <td class="td-p"> Abonament lunar și recurent!&nbsp;</td>
-            <td class="td-i"><span class="no-text">dcscsdhjbbbbjhb</span></td>
-
-        </tr>
+        
     </tbody>
 </table>
 </section>
@@ -422,14 +418,111 @@ zâmbet sincer și de toata energia bună a acestora &#x1F497;
   </p>
 
 </div>
-        
-  <!--========GALLERY 2========-->   
-  <div id="container1">
 
-</div>
+ <!--====================galerie noua ====================-->
+ <style>
+    .container-galerie {
+      cursor: pointer;
+      background-position: center center;
+      background-size: cover;
+      background-image: url("https://images.unsplash.com/photo-1621295693450-080546d2ec8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMTYyOTMxMA&ixlib=rb-1.2.1&q=80&w=1800");
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+    
+    .container-galerie:focus {
+      display: none;
+    }
+    
+    .flap {
+      width: 60vmax;
+      height: 60vmax;
+      position: absolute;
+      bottom: 50%;
+      right: 50%;
+      pointer-events: none;
+      will-change: transform;
+      background: linear-gradient(35deg, #555, black);
+      border: solid 4px #999;
+    
+      --p: calc(var(--i) / var(--flaps));
+    
+      animation: click 0.9s cubic-bezier(0.5, 0, 0.5, 1) 0.1s;
+      transform-origin: bottom right;
+    }
+    
+    .flap:nth-child(1) { --i: 0; }
+    .flap:nth-child(2) { --i: 1; }
+    .flap:nth-child(3) { --i: 2; }
+    .flap:nth-child(4) { --i: 3; }
+    .flap:nth-child(5) { --i: 4; }
+    .flap:nth-child(6) { --i: 5; }
+    
+    @keyframes click {
+      48%, 52% {
+        transform: rotate(-0.25turn) rotate(calc(1turn * var(--p))) skewX(30deg) translateX(0%) translateY(0%);
+      }
+    }
+    
+    .photo {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center center;
+      background-size: cover;
+      box-shadow: 0 10px 40px #000;
+      margin: -1rem;
+      margin-bottom: -5rem;
+      border: solid 1rem #fff;
+      border-bottom-width: 5rem;
+      animation: photo 5s cubic-bezier(0.5, 0, 0.5, 1) 0.9s both;
+    }
+    
+    @keyframes photo {
+      30%, 60%, 70% {
+        filter: sepia(30%) saturate(140%) contrast(120%);
+        transform: scale(0.5) rotate(-4deg);
+      }
+      61% {
+        opacity: 1;
+      }
+      71% {
+        opacity: 0;
+        transform: none;
+      }
+      100% {
+        filter: none;
+        opacity: 1;
+      }
+    }
+    </style>
+    
+    <div class="container-galerie">
+      <div class="photo" style="background-image: url('https://images.unsplash.com/photo-1621269339551-15cbf8e41577?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMTYxMjk1OA&ixlib=rb-1.2.1&q=80&w=1600');"></div>
+      <div class="shutter" style="--flaps: 6">
+        <div class="flap"></div>
+        <div class="flap"></div>
+        <div class="flap"></div>
+        <div class="flap"></div>
+        <div class="flap"></div>
+        <div class="flap"></div>
+      </div>
+    </div>
+ 
+   
+    
 
 
-                
+
+
+
+
+  <!--==================== end ====================-->
         <!--==================== FOOTER ====================-->
 <!--        
             <div class="container">
@@ -451,7 +544,7 @@ zâmbet sincer și de toata energia bună a acestora &#x1F497;
         </footer> -->
     
 <!-- contact + harta-->
-    <section class="contact-section-nou" id="contact">
+<section class="contact-section-nou" id="contact">
         <div class="contact-bg-nou">
            
             <h2 class="section__subtitle margin-top">Contact</h2>
@@ -523,6 +616,7 @@ zâmbet sincer și de toata energia bună a acestora &#x1F497;
                 </div>
             </div>
         </div>
+        
         <div class="contact-footer">
             <h3>Urmarește-ne</h3>
             <div class="social-links">
