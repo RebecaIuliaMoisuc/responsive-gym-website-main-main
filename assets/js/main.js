@@ -174,12 +174,12 @@ function placeImage(transitionIn) {
     image = images[imageIndex];
 
     if (++imageIndex === images.length) imageIndex = 0;
-
+    
     image.addEventListener('click', imageClickHandler);
     container.appendChild(image);
 
     if (transitionIn !== false) {
-        TweenMax.fromTo(image, 0.75, {y:-1000}, {y:0, ease:Back.easeOut});
+        TweenMax.fromTo(image, 0.4, {y:0}, {y:0, ease:Back.easeIn});
     }
 }
 
@@ -259,7 +259,7 @@ function shatter() {
             rotationY:ry,
             ease:Cubic.easeIn
         });
-        tl1.to(fragment.canvas, 0.4,{alpha:0}, 0.6);
+        tl1.to(fragment.canvas, 0.3,{alpha:0}, 0.2);
 
         tl0.insert(tl1, delay);
 
@@ -465,3 +465,4 @@ $('#play-carousel').click(function(evt) {
   }
 
 });
+

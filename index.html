@@ -35,7 +35,8 @@
 
         <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/delaunay.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/TweenMax.min.js"></script>
-
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/delaunay.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.13.2/TweenMax.min.js"></script>
         <title>Akela SWIM </title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
             integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
@@ -204,15 +205,15 @@
     </div>
 </figure>
 <figure class="snip1157">
-    <blockquote>Luptă pentru progres, nu pentru perfecțiune!"
+    <blockquote>Luptă pentru progres, nu pentru perfecțiune!" <br><br>
         <div class="arrow"></div>
     </blockquote>
-    <img src="assets/img/poza-modified.png" alt="aboutIMG">
+    <img src="assets/img/poza-modified.png" alt="aboutIMG" class="cristi">
     <div class="author">
         <h5>Cristian <span> Fondator </span></h5>
     </div>
 </figure>
-<figure class="snip1157">
+<!-- <figure class="snip1157">
     <blockquote>Nu poți pune o limită pentru nimic. 
         Cu cât visezi mai mult, cu atât mai departe ajungi.
         <div class="arrow"></div>
@@ -221,10 +222,12 @@
     <div class="author">
         <h5>Daniel <span > Antrenor</span></h5>
     </div>
-</figure>
+</figure> -->
 </div>
 
 <!--end testimoniale-->
+
+
 
 <!-- ======================== tabel abonamente   ==================================== -->
 <section class="pricing section incercare" id="pricing">
@@ -409,7 +412,10 @@
     <span class="dot" onclick="currentSlide(9)"></span>
    
   </div>
-  
+  <!--========GALLERY 2========-->   
+<div id="container1">
+
+</div>
 <h3 class="paragraf_ab ">Creionează aventuri de neuitat și colectează momente frumoase, nu lucruri!</h3> 
 <p class="paragraf_ab">
 Asta facem noi la Akela Swim, împreuna cu micuții noștri înotători!
@@ -430,7 +436,7 @@ zâmbet sincer și de toata energia bună a acestora &#x1F497;
       height: 100vh;
       position: relative;
     }
-    
+
     .container-galerie:focus {
       display: none;
     }
@@ -502,19 +508,10 @@ zâmbet sincer și de toata energia bună a acestora &#x1F497;
     }
     </style>
     
-    <div class="container-galerie">
-      <div class="photo" style="background-image: url('https://images.unsplash.com/photo-1621269339551-15cbf8e41577?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMTYxMjk1OA&ixlib=rb-1.2.1&q=80&w=1600');"></div>
-      <div class="shutter" style="--flaps: 6">
-        <div class="flap"></div>
-        <div class="flap"></div>
-        <div class="flap"></div>
-        <div class="flap"></div>
-        <div class="flap"></div>
-        <div class="flap"></div>
-      </div>
-    </div>
- 
-   
+</div>
+
+
+
     
 
 
@@ -579,8 +576,7 @@ zâmbet sincer și de toata energia bună a acestora &#x1F497;
                     <span><i class="fas fa-clock"></i></span>
                     <h3>Program</h3>
                     <span class="text-nou">Luni-Vineri &#160;:&#160; 09:00 - 21:00 </span>
-                    <span class="text-nou">Weekend &#160;:&#160; 09:00 - 18:00 </span>
-                   
+                    <span class="text-nou">Weekend &#160;:&#160; 09:00 - 18:00 </span>      
                 </div>
             </div>
     
@@ -707,8 +703,7 @@ zâmbet sincer și de toata energia bună a acestora &#x1F497;
                     alert("Introduceți un mesaj.");
                     isValid = false;
                 }
-
-
+                
                 if (!isValid) {
                     event.preventDefault(); // Oprire submit dacă nu sunt valide
                 }

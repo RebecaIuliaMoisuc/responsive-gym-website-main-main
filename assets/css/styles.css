@@ -1028,7 +1028,9 @@ figure.snip1157 {
   text-align: left;
   box-shadow: none !important;
 }
-
+.cristi{
+  margin-top: 4rem !important;
+}
 figure.snip1157 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -2631,6 +2633,17 @@ font-size: var(--h3-font-size);
   -webkit-transition: $transition;
   transition:         $transition;
 }
+.prev{
+  color: var(--first-color) !important;
+  margin-left: -3rem;
+  font-size: 2rem;
+  
+}
+.next{
+  margin-right: -3rem;
+  font-size: 2rem;
+  color: var(--first-color) !important;
+}
 #carrousel{
     margin: 10px;
     @media (max-width: 768px){
@@ -2764,3 +2777,48 @@ font-size: var(--h3-font-size);
         }
     }
 }
+
+/* body {
+  background-color: #000;
+  margin: 0;
+  overflow: hidden;
+} */
+
+canvas {
+  position: absolute;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+}
+
+
+#container1 {
+  position: relative !important;
+  width: 768px;
+  height: 485px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+@media (max-width: 767px) {
+  #container1 {
+    display: none;
+  }
+}
+
+
+@media (min-width: 766px) {
+  .slideshow-container {
+    display: none;
+  }
+  .dot{
+    display: none; 
+  }
+}
+
+
