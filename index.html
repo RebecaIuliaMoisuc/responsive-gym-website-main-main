@@ -124,7 +124,18 @@
 </section>
 
            
-             
+<script>
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    document.addEventListener('keydown', function(e) {
+        // If F12 key is pressed
+        if (e.key === 'F12') {
+            e.preventDefault(); // Prevent default behavior
+        }
+    });
+</script>        
 <!--==================== despre noi ====================-->
 <!-- about section -->
 
