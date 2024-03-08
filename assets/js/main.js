@@ -394,6 +394,8 @@ contactForm.addEventListener("submit", (e) => {
     phone: phoneInput.value,
     msg: msgInput.value,
   };
+
+  console.log('fields: ', inputFields)
   emailjs.send(serviceID, templateID, inputFields).then(
     () => {
       submitBtn.innerText = "Mesaj Trimis!";
