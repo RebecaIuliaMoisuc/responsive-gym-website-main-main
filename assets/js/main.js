@@ -476,6 +476,14 @@ $('#play-carousel').click(function(evt) {
   }
 
 });
+lightbox.option({
+  'resizeDuration': 200,
+  'wrapAround': true
+})
+
+
+
+
 
 
 

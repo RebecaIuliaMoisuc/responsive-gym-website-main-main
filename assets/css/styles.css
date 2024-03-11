@@ -2903,14 +2903,25 @@ canvas {
       }
     }
    
+  
+  
+  /* lightbox styles - zoom la imagini carrusel */
+  
+  .lb-image{
+    margin-top:50% !important;
+  }
+  .lb-details{
+    display: none !important;
+  }
+  #lightboxOverlay{
+    opacity: 0.9;
+  }
 
-
-
-    
-
-
-
-
-
-
-  /* <!--==================== end ====================--> */
+  .lb-prev,
+  .lb-next
+  {
+    color: white;
+    font-size: 1rem;
+    visibility: visible !important;
+    display: inline !important;
+  }
