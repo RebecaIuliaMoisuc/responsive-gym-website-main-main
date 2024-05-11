@@ -35,26 +35,35 @@ const scrollHeader = () => {
 window.addEventListener("scroll", scrollHeader);
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 
-const sections = document.querySelectorAll("section [id]");
-const scrollActive = () => {
-  const scrollY = window.pageYOffset;
+document.addEventListener('DOMContentLoaded', function() {
+  const linksWithAnchors = document.querySelectorAll('a[href*="#"]');
+  
+  linksWithAnchors.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+          e.preventDefault(); // Previne comportamentul implicit de derulare a paginii
 
-  sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight,
-      sectionTop = current.offsetTop - 58,
-      sectionId = current.getAttribute("id"),
-      sectionsClass = document.querySelector(
-        " .nav__menu  a[href*=" + sectionId + "]"
-      );
+          const targetId = this.getAttribute('href').substring(1); // Obține ID-ul țintei fără semnul '#'
+          const targetElement = document.getElementById(targetId); // Găsește elementul țintă
 
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      sectionsClass.classList.add("active-link");
-    } else {
-      sectionsClass.classList.remove("active-link");
-    }
+          if (targetElement) {
+              let offset = 0; // Offset-ul implicit
+
+              // Verifică dacă linkul are atributul "data-offset"
+              if (this.hasAttribute('data-offset')) {
+                  offset = parseInt(this.getAttribute('data-offset')); // Obține valoarea offset-ului din atribut
+              }
+
+              const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+              
+              window.scrollTo({
+                  top: targetPosition,
+                  behavior: 'smooth' // Derulează lin
+              });
+          }
+      });
   });
-  window.addEventListener("scroll", scrollActive);
-};
+});
+
 /*=============== SHOW SCROLL UP ===============*/
 const scrollUp = () => {
   const scrollUp = document.getElementById("scroll-up");
@@ -174,12 +183,12 @@ function placeImage(transitionIn) {
     image = images[imageIndex];
 
     if (++imageIndex === images.length) imageIndex = 0;
-
+    
     image.addEventListener('click', imageClickHandler);
     container.appendChild(image);
 
     if (transitionIn !== false) {
-        TweenMax.fromTo(image, 0.75, {y:-1000}, {y:0, ease:Back.easeOut});
+        TweenMax.fromTo(image, 0.3, {y:0}, {y:0, ease:Back.easeIn});
     }
 }
 
@@ -259,7 +268,7 @@ function shatter() {
             rotationY:ry,
             ease:Cubic.easeIn
         });
-        tl1.to(fragment.canvas, 0.4,{alpha:0}, 0.6);
+        tl1.to(fragment.canvas, 0.3,{alpha:0}, 0.2);
 
         tl0.insert(tl1, delay);
 
@@ -385,6 +394,8 @@ contactForm.addEventListener("submit", (e) => {
     phone: phoneInput.value,
     msg: msgInput.value,
   };
+
+  console.log('fields: ', inputFields)
   emailjs.send(serviceID, templateID, inputFields).then(
     () => {
       submitBtn.innerText = "Mesaj Trimis!";
@@ -465,3 +476,16 @@ $('#play-carousel').click(function(evt) {
   }
 
 });
+lightbox.option({
+  'resizeDuration': 200,
+  'wrapAround': true
+})
+
+
+
+
+
+
+
+
+
