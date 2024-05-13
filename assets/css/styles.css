@@ -2003,7 +2003,7 @@ html::-webkit-scrollbar-thumb:hover {
   padding-left: 0px;
   color: var(--text-color);
 font-size: var(--h3-font-size);
-  margin-top: 0px;
+  margin-top: 1rem;
   margin-right: 0px;
   margin-bottom: 40px;
   margin-left: 0px;
@@ -2027,6 +2027,7 @@ font-size: var(--h3-font-size);
     line-height: 40px;
     max-width: 370px;
     width: auto;
+    text-align: left !important;
   }
 
   .dext-blk.subHeading {
@@ -2060,10 +2061,10 @@ font-size: var(--h3-font-size);
 .leftSide {
   width: 100%;
   max-width: 500px;
-  margin-left: 20px; 
+  /* margin-left: 20px;  */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Adăugăm această linie */
+  justify-content: left; /* Adăugăm această linie */
 }
 
 .rightSide {
@@ -2071,9 +2072,9 @@ font-size: var(--h3-font-size);
     height: 500px;
     margin-top: 20px;
 }
-.heading {
+/* .heading {
   text-align: center !important;
-}
+} */
 @media (max-width: 1024px) {
     .Container {
         flex-direction: column;
@@ -2089,6 +2090,11 @@ font-size: var(--h3-font-size);
         margin-top: 20px;
         margin-right: 0;
     }
+}
+@media (min-width: 1023px){
+  .text-blk.heading{
+    text-align: left !important;
+  }
 }
 
 .slideshow-container {
