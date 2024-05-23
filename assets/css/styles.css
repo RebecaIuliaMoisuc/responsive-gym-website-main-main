@@ -2096,7 +2096,11 @@ font-size: var(--h3-font-size);
     text-align: left !important;
   }
 }
-
+.cristi{
+  width: 200px;
+  height: 200px;
+  aspect-ratio: 1/1 !important;
+}
 .slideshow-container {
   width: 80vw;
 }
