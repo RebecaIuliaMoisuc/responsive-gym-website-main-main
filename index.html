@@ -189,31 +189,80 @@
                         <div class="responsive-container-block leftSide">
                             <p class="text-blk heading">Cine Suntem?</p>
                             <p class="text-blk subHeading">
-                            Akela Swimming Club este un club de înot cu antrenori profesioniști care îi ajută, atât pe copii, cât și pe adulți, să învețe să înoate, cu o echipă formată din antrenori tineri, dedicați, prietenoși și înțelegători.
+                                Akela Swimming Club este un club de înot cu antrenori profesioniști care îi ajută, atât pe copii, cât și pe adulți, să învețe să înoate, cu o echipă formată din antrenori tineri, dedicați, prietenoși și înțelegători.
                             </p>
-                                <p class="text-blk subHeading">
-                                    Vom fi ghizii voștri în această călătorie, oferindu-vă nu doar lecții de înot, ci și instrumentele necesare pentru a adopta un stil de viață sănătos și echilibrat.
-
-                                    Pentru a transmite mai departe pasiunea noastră față de înot, desfășurăm cursuri de inițiere sau perfecționare la bazinul Complex Sportiv de Natație Otopeni.
-
-                                </p> 
+                            <p class="text-blk subHeading">
+                                Vom fi ghizii voștri în această călătorie, oferindu-vă nu doar lecții de înot, ci și instrumentele necesare pentru a adopta un stil de viață sănătos și echilibrat.
+                                Pentru a transmite mai departe pasiunea noastră față de înot, desfășurăm cursuri de inițiere sau perfecționare la bazinul Complex Sportiv de Natație Otopeni.
+                            </p> 
                         </div>
-                         
-                        <div class="responsive-container-block rightSide">
-
-                            <iframe class="video-youtube" allowfullscreen="allowfullscreen" 
-                                src="https://youtube.com/embed/GDJaiBRWyjw?si=1fbPupmCgoU7ZMZE" alt="Inot Akela - cursuri inot" 
-                                style="display: block; border: none; width: 100%; height: 100%;">
-                            </iframe>
-                                <!-- <iframe src="https://drive.google.com/file/d/1E2Gx2hVNqNsEyYLZ3RGsBWp3670jrzcf/preview" 
-                                  allowfullscreen="allowfullscreen" width="100%" height="100%" frameborder="0">
-                                </iframe> -->
+                        <div id="videoCarousel" class="carousel slide carousel-fade rightSide" data-bs-interval="false">
+                            <ol class="carousel-indicators">
+                                <li data-target="#videoCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#videoCarousel" data-slide-to="1"></li>
+                                <li data-target="#videoCarousel" data-slide-to="2"></li>
+                                <li data-target="#videoCarousel" data-slide-to="3"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <iframe class="video-youtube" allowfullscreen="allowfullscreen" 
+                                            src="https://youtube.com/embed/GDJaiBRWyjw?enablejsapi=1" alt="Inot Akela - cursuri inot" 
+                                            style="border: none; width: 100%; height: 100%;">
+                                    </iframe>
+                                </div>
+                                <div class="carousel-item">
+                                    <iframe class="video-youtube" allowfullscreen="allowfullscreen" 
+                                            src="https://youtube.com/embed/bdGb59vL7ok?enablejsapi=1" alt="Inot Akela - cursuri inot" 
+                                            style="border: none; width: 100%; height: 100%;">
+                                    </iframe>
+                                </div>
+                                <div class="carousel-item">
+                                    <iframe class="video-youtube" allowfullscreen="allowfullscreen" 
+                                            src="https://youtube.com/embed/14CRHpZCqfg?enablejsapi=1" alt="Inot Akela - cursuri inot" 
+                                            style="border: none; width: 100%; height: 100%;">
+                                    </iframe>
+                                </div>
+                                <div class="carousel-item">
+                                    <iframe class="video-youtube" allowfullscreen="allowfullscreen" 
+                                            src="https://youtube.com/embed/nF0492oFKJU?enablejsapi=1" alt="Inot Akela - cursuri inot" 
+                                            style="border: none; width: 100%; height: 100%;">
+                                    </iframe>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
                         </div>
+                        
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                var carousel = document.getElementById('videoCarousel');
+                                var carouselInstance = new bootstrap.Carousel(carousel);
+                        
+                                var prevBtn = carousel.querySelector('.carousel-control-prev');
+                                var nextBtn = carousel.querySelector('.carousel-control-next');
+                        
+                                prevBtn.addEventListener('click', function () {
+                                    carouselInstance.prev();
+                                });
+                        
+                                nextBtn.addEventListener('click', function () {
+                                    carouselInstance.next();
+                                });
+                            });
+                        </script>
+                        
                     </div>
-
+                    
                 </div>
             </section>
-                     
+            
+            
 
       <!--=========================  testimoniale =====================================-->
             <div class="testimoniale-container">
@@ -432,15 +481,14 @@ Această dinamică de grup poate fi deosebit de benefică în dezvoltarea încre
                     </tbody>
                 </table>
                 <ul class="paragraf_ab margin_bottom">
-                    O sesiune de pregătire pentru performanța în domeniul nației este meticulos concepută pentru a optimiza fiecare aspect al abilităților și condiții fizice ale înotătorilor. Scopul acestei sesiuni este de a pregăti sportivii pentru competiții de înalt nivel, asigurându-se că fiecare participant 
-                    îți atinge potențialul maxim. Sesiunea, cu o durată de 90 de minute, permite cursanților să beneficieze de un antrenament echilibrat și intensiv, optimizat pentru a dezvolta atât abilități tehnice, cât și condiția fizică necesară pentru a excela în competiții de înot.
+                    O sesiune de pregătire pentru performanța în domeniul nației este meticulos concepută pentru a optimiza fiecare aspect al abilităților și condiții fizice ale înotătorilor. Scopul acestei sesiuni este de a pregăti sportivii pentru competiții de înalt nivel, asigurându-se că fiecare participant îți atinge potențialul maxim. Sesiunea, cu o durată de 90 de minute, permite cursanților să beneficieze de un antrenament echilibrat și intensiv, optimizat pentru a dezvolta atât abilități tehnice, cât și condiția fizică necesară pentru a excela în competiții de înot.
                     
                     <br><br>
                     <li>
                         Ședința de grup este susținută de unu sau doi antrenori cu maxim 8 cursanți                    
                      </li>
                     <li>
-                        Durata ședinței este de 90 minute
+                        Durata ședinței este de 50 minute
                     </li>
                     <li>
                         Ședințele se stabilesc cu acordul comun între antrenor și client
@@ -473,59 +521,101 @@ Această dinamică de grup poate fi deosebit de benefică în dezvoltarea încre
 
 
                 <div class="mySlides fade">
-                    <a href="assets/img/poza1.jpg" data-lightbox="image1">
+                  
                         <img src="assets/img/poza1.jpg" style="width:100%" class="img_galerie" alt="copii inot">
-                    </a>
+                   
                 </div>
                 <div class="mySlides fade">
-                    <a href="assets/img/poza10.jpg" data-lightbox="image1">
+                   
                         <img src="assets/img/poza10.jpg" style="width:100%" class="img_galerie " alt="bazin otopeni">
-                    </a>
+                   
                 </div>
 
                 <div class="mySlides fade">
-                    <a href="assets/img/poza0.jpg" data-lightbox="image1">
+                  
                         <img src="assets/img/poza0.jpg" style="width:100%" class="img_galerie" alt="akela inot">
-                    </a>
+                    
                 </div>
 
 
                 <div class="mySlides fade">
 
-                    <a href="assets/img/poza17.jpg" data-lightbox="image1">
+                    
                         <img src="assets/img/poza17.jpg" style="width:100%" class="img_galerie" alt="cursuri inot">
-                    </a>
+                 
                 </div>
                 <div class="mySlides fade">
-                    <a href="assets/img/poza19.jpg" data-lightbox="image1">
+                   
                         <img src="assets/img/poza19.jpg" style="width:100%" class="img_galerie " alt="antrenor">
-                    </a>
+               
                 </div>
                 <div class="mySlides fade">
-                    <a href="assets/img/poza11.jpg" data-lightbox="image1">
+                    
                         <img src="assets/img/poza11.jpg" style="width:100%" class="img_galerie" alt="akela swim">
-                    </a>
+                    
                 </div>
                 <div class="mySlides fade">
-                    <a href="assets/img/poza13.jpg" data-lightbox="image1">
+                   
                         <img src="assets/img/poza13.jpg" style="width:100%" class="img_galerie " alt="inot">
-                    </a>
+                    
                 </div>
                 <div class="mySlides fade">
-                    <a href="assets/img/poza15.jpg" data-lightbox="image1">
+                    
                         <img src="assets/img/poza15.jpg" style="width:100%" class="img_galerie " alt="performanta">
-                    </a>
+                  
                 </div>
                 <div class="mySlides fade">
-                    <a href="assets/img/poza21.jpg" data-lightbox="image1">
+                    
                         <img src="assets/img/poza21.jpg" style="width:100%" class="img_galerie" alt="bazin copii">
-                    </a>
+                    
                 </div>
                 <div class="mySlides fade">
-                    <a href="assets/img/poza6.jpg" data-lightbox="image1">
+                   
                         <img src="assets/img/poza6.jpg" style="width:100%" class="img_galerie" alt="club inot">
-                    </a>
+                    
                 </div>
+                <div class="mySlides fade">
+                    
+                        <img src="assets/img/12.jpeg" style="width:100%" class="img_galerie" alt="club inot">
+                    
+                </div>
+                <div class="mySlides fade">
+                    
+                        <img src="assets/img/9.jpeg" style="width:100%" class="img_galerie" alt="club inot">
+                    
+                </div>
+                <div class="mySlides fade">
+                    
+                        <img src="assets/img/1.jpeg" style="width:100%" class="img_galerie" alt="club inot">
+                   
+                </div>
+                <div class="mySlides fade">
+                    
+                        <img src="assets/img/8.jpeg" style="width:100%" class="img_galerie" alt="club inot">
+                    
+                </div>
+                
+                <div class="mySlides fade">
+                    
+                        <img src="assets/img/2.jpeg" style="width:100%" class="img_galerie" alt="club inot">
+                    
+                </div>
+                <div class="mySlides fade">
+                   
+                        <img src="assets/img/3.jpeg" style="width:100%" class="img_galerie" alt="club inot">
+                  
+                </div>
+                <div class="mySlides fade">
+                   
+                        <img src="assets/img/6.jpeg" style="width:100%" class="img_galerie" alt="club inot">
+                 
+                </div>
+                <div class="mySlides fade">
+                  
+                        <img src="assets/img/7.jpeg" style="width:100%" class="img_galerie" alt="club inot">
+                   
+                </div>
+                
 
 
                 <!-- Next and previous buttons -->
@@ -535,24 +625,10 @@ Această dinamică de grup poate fi deosebit de benefică în dezvoltarea încre
             <br>
 
             <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
-                <span class="dot" onclick="currentSlide(5)"></span>
-                <span class="dot" onclick="currentSlide(6)"></span>
-                <span class="dot" onclick="currentSlide(7)"></span>
-                <span class="dot" onclick="currentSlide(8)"></span>
-                <span class="dot" onclick="currentSlide(9)"></span>
-
-            </div>
-
+           
 
             <!--========GALLERY 2========-->
-            <div id="container1">
-
-            </div>
+           
             <h3 class="paragraf_ab ">Creionează aventuri de neuitat și colectează momente frumoase, nu lucruri!</h3>
             <p class="paragraf_ab">
                 Asta facem noi la Akela Swim, împreuna cu micuții noștri înotători!
@@ -561,7 +637,7 @@ Această dinamică de grup poate fi deosebit de benefică în dezvoltarea încre
                 zâmbet sincer și de toata energia bună a acestora &#x1F497;
             </p>
 
-         
+            </div>
 
 
 
@@ -638,6 +714,7 @@ Această dinamică de grup poate fi deosebit de benefică în dezvoltarea încre
                         </div>
                     </div>
                 </div>
+                
 
                 <!-- footer -->
                 <div class="contact-footer">
