@@ -255,6 +255,37 @@
                                     carouselInstance.next();
                                 });
                             });
+                            document.addEventListener('DOMContentLoaded', function () {
+    var carousel = document.getElementById('videoCarousel');
+    var carouselInstance = new bootstrap.Carousel(carousel);
+
+    // Function to pause all YouTube videos in the carousel
+    function pauseAllVideos() {
+        var videos = carousel.querySelectorAll('iframe.video-youtube');
+        videos.forEach(function(video) {
+            video.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        });
+    }
+
+    // Pause videos when the carousel slides
+    carousel.addEventListener('slide.bs.carousel', function () {
+        pauseAllVideos();
+    });
+
+    // Pause videos when the next/prev buttons are clicked
+    var prevBtn = carousel.querySelector('.carousel-control-prev');
+    var nextBtn = carousel.querySelector('.carousel-control-next');
+
+    prevBtn.addEventListener('click', function () {
+        pauseAllVideos();
+        carouselInstance.prev();
+    });
+
+    nextBtn.addEventListener('click', function () {
+        pauseAllVideos();
+        carouselInstance.next();
+    });
+});
                         </script>
                         
                     </div>
@@ -626,7 +657,6 @@ Această dinamică de grup poate fi deosebit de benefică în dezvoltarea încre
 
             <!-- The dots/circles -->
            
-
             <!--========GALLERY 2========-->
            
             <h3 class="paragraf_ab ">Creionează aventuri de neuitat și colectează momente frumoase, nu lucruri!</h3>

@@ -90,7 +90,7 @@ table {
 @media only screen and (max-width: 760px) {
   .paragraf_ab {
     padding-top: 3rem !important;
-    width: 70vw;
+    width: 93vw;
     margin: 0 auto;
   }
 }
@@ -1271,7 +1271,7 @@ html::-webkit-scrollbar-thumb:hover {
   color: white;
 }
 
-.scrollUp {
+/* .scrollUp {
   position: fixed;
   right: 2rem !important;
   bottom: 2% !important;
@@ -1288,10 +1288,53 @@ html::-webkit-scrollbar-thumb:hover {
   color: white;
 }
 
-/* Show Scroll Up*/
+/* Show Scroll Up*/.scrollUp {
+  position: fixed;
+  right: 2rem; /* Adjust the distance from the right edge */
+  bottom: 2rem; /* Adjust the distance from the bottom edge */
+  background-color: var(--first-color); /* Set the background color to pink */
+  display: inline-flex;
+  padding: 0.35rem;
+  color: white; /* Set the arrow color to white */
+  font-size: var(--z-tooltip);
+  transition: 0.3s;
+  z-index: 100000;
+   /* Optional: Make the button circular */
+}
+
+.scrollUp:hover {
+  transform: translateY(-0.25rem);
+  color: white; /* Ensure the arrow remains white on hover */
+}
+
+/* Show Scroll Up */
 .show-scroll {
   bottom: 3rem;
 }
+
+/* Media queries for different screen sizes */
+@media (max-width: 768px) {
+  .scrollUp {
+    right: 1rem; /* Adjust the distance for smaller screens */
+    bottom: 1.5rem; /* Adjust the distance for smaller screens */
+  }
+
+  .show-scroll {
+    bottom: 2.5rem; /* Adjust the distance for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .scrollUp {
+    right: 1rem; /* Adjust the distance for very small screens */
+    bottom: 0.7rem; /* Adjust the distance for very small screens */
+  }
+
+  .show-scroll {
+    bottom: 1.5rem; /* Adjust the distance for very small screens */
+  }
+}
+
 
 /*=============== BREAKPOINTS ===============*/
 
@@ -2981,7 +3024,7 @@ canvas {
     .scrollUp{
     position: fixed;
   right: 1rem !important;
-  bottom: 10vh !important;
+  bottom: 5vh !important;
   background-color: var(--first-color);
   display: inline-flex;
   padding: 0.35rem;
