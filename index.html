@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cursuri Inot Bucuresti || Akela SWIM </title>
     <meta name="Description"
-        content="Descoperă universul captivant al înotului alături de Akela - furnizorul de top al cursurilor profesioniste de înot pentru toate vârstele în București. Antrenorii experimentați și pasionați îți oferă îndrumare personalizată la cele mai avantajoase preturi!" />
+        content="Descoperă universul captivant al înotului alături de Akela - furnizorul de top al cursurilor profesioniste de înot pentru toate vârstele în București și Otopeni. Antrenorii experimentați și pasionați îți oferă îndrumare personalizată la cele mai avantajoase preturi!" />
     <link rel="canonical" href="https://akela.ro/">
     <link rel="icon" href="assets/img/akela.jpg" sizes="16x16">
     <meta name="robots" content="ALL, index, follow" />
     <meta name="keywords"
         content="inot, club inot, bucuresti, bazin, antrenor, sport, otopeni, performata, copii, adulti, preturi mici,
-        inot Otopeni, preturi mici inot, cel mai bun instructor de inot, Cristian Ciupercovici, Akela Swim inot, Akela Swim club inot ">
+        inot Otopeni, preturi mici inot, cel mai bun instructor de inot, Cristian Ciupercovici, Akela Swim inot, Akela Swim club inot">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
@@ -255,6 +255,37 @@
                                     carouselInstance.next();
                                 });
                             });
+                            document.addEventListener('DOMContentLoaded', function () {
+    var carousel = document.getElementById('videoCarousel');
+    var carouselInstance = new bootstrap.Carousel(carousel);
+
+    // Function to pause all YouTube videos in the carousel
+    function pauseAllVideos() {
+        var videos = carousel.querySelectorAll('iframe.video-youtube');
+        videos.forEach(function(video) {
+            video.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        });
+    }
+
+    // Pause videos when the carousel slides
+    carousel.addEventListener('slide.bs.carousel', function () {
+        pauseAllVideos();
+    });
+
+    // Pause videos when the next/prev buttons are clicked
+    var prevBtn = carousel.querySelector('.carousel-control-prev');
+    var nextBtn = carousel.querySelector('.carousel-control-next');
+
+    prevBtn.addEventListener('click', function () {
+        pauseAllVideos();
+        carouselInstance.prev();
+    });
+
+    nextBtn.addEventListener('click', function () {
+        pauseAllVideos();
+        carouselInstance.next();
+    });
+});
                         </script>
                         
                     </div>
@@ -626,7 +657,6 @@ Această dinamică de grup poate fi deosebit de benefică în dezvoltarea încre
 
             <!-- The dots/circles -->
            
-
             <!--========GALLERY 2========-->
            
             <h3 class="paragraf_ab ">Creionează aventuri de neuitat și colectează momente frumoase, nu lucruri!</h3>
