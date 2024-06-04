@@ -188,7 +188,7 @@ function placeImage(transitionIn) {
     container.appendChild(image);
 
     if (transitionIn !== false) {
-        TweenMax.fromTo(image, 0.3, {y:0}, {y:0, ease:Back.easeIn});
+        TweenMax.fromTo(image, 0.4, {y:0}, {y:0, ease:Back.easeIn});
     }
 }
 
@@ -480,12 +480,3 @@ lightbox.option({
   'resizeDuration': 200,
   'wrapAround': true
 })
-
-
-
-
-
-
-
-
-

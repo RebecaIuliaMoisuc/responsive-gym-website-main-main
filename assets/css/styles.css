@@ -453,9 +453,9 @@ a {
   width: 100%;
   height: 100%;
   background: linear-gradient(rgba(96, 96, 96, 0.366), rgba(43, 43, 43, 0.5)),
-    url("../img/poza1.jpg");
+    url("../img/poza23-test.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto, cover;
   z-index: -1;
   opacity: 0.6;
   /* Place the overlay behind the content */
@@ -1281,6 +1281,7 @@ html::-webkit-scrollbar-thumb:hover {
   color: white;
   font-size: var(--z-tooltip);
   transition: 0.3s;
+  z-index: 100000;
 }
 .scrollUp:hover {
   transform: translateY(-0.25rem);
@@ -2056,6 +2057,7 @@ font-size: var(--h3-font-size);
 
 .Container {
     max-width: 1320px;
+    /* margin-left: 30px; */
 }
 
 .leftSide {
@@ -2065,6 +2067,7 @@ font-size: var(--h3-font-size);
   display: flex;
   flex-direction: column;
   justify-content: left; /* Adăugăm această linie */
+  margin-right: 2rem !important;
 }
 
 .rightSide {
@@ -2086,9 +2089,9 @@ font-size: var(--h3-font-size);
     }
     
     .rightSide {
-        width: 100%;
+        width: 90vw;
         margin-top: 20px;
-        margin-right: 0;
+        margin-left:10px !important
     }
 }
 @media (min-width: 1023px){
@@ -2384,6 +2387,8 @@ font-size: var(--h3-font-size);
   margin: 1.6rem 0;
   font-size: 1rem;
 }
+
+
 
 .contact-body-nou {
   max-width: 1320px;
@@ -2756,14 +2761,14 @@ canvas {
 }
 
 
-@media (min-width: 766px) {
+/* @media (min-width: 766px) {
   .slideshow-container {
     display: none;
   }
   .dot{
     display: none; 
   }
-}
+} */
 
 /* <!--====================galerie noua ====================--> */
  
@@ -2987,7 +2992,7 @@ canvas {
 
   }
  iframe{
-  width: 281px !important;
+  /* width: 281px !important; */
   border-radius: 20px !important;
  }
  
@@ -3024,4 +3029,147 @@ canvas {
 }
  
 
+/* Add this CSS to style the arrows */
 
+/* Style for the arrow buttons */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5); /* Change the background color as desired */
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+  z-index: 100; /* Ensure the buttons appear above the video */
+  transition: background-color 0.3s ease; /* Add a transition effect for a smoother hover effect */
+}
+
+/* Style for the previous arrow */
+.prev-arrow {
+  left: 10px; /* Adjust the distance from the left side */
+}
+
+/* Style for the next arrow */
+.next-arrow {
+  right: 10px; /* Adjust the distance from the right side */
+}
+
+/* Hover effect for the arrows */
+.arrow:hover {
+  background-color: rgba(255, 255, 255, 0.7); /* Change the background color on hover */
+}
+
+/* Positioning for the video container and arrow buttons */
+.video-arrow-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+}
+.carousel-item{
+height: 500px !important;
+width: 281px !important;
+background-color: transparent;
+/* margin-left: 2rem; */
+}
+.carousel-indicators {
+  display: none !important;
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    font-size: 2rem;
+    color: var(--first-color) !important;
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+    content: '';
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev {
+    left: 14px !important;
+}
+
+.carousel-control-next {
+    right: 30px;
+}
+
+@media (max-width: 1024px) {
+  .carousel {
+      
+      margin-right: auto;
+  }
+  .carousel-control-prev{
+    /* left: 0px !important; */
+  }
+}
+.carousel-inner{
+width: 300px !important;
+margin: 0 auto !important;
+}
+
+  /* Common styles for carousel arrows */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: var(--first-color); /* Semi-transparent background */
+    border-radius: 50%; /* Circular shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 1; /* Ensure arrows are above the video */
+}
+
+
+
+/* Style the icons inside the arrows */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: transparent; /* Remove any background color */
+    background-image: none; /* Remove any existing background image */
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+}
+
+/* Rotate the previous arrow icon to point left */
+.carousel-control-prev-icon {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+/* Rotate the next arrow icon to point right */
+.carousel-control-next-icon {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
