@@ -25,6 +25,17 @@ const linkAction = () => {
   navMenu.classList.remove("show-menu");
 };
 navLink.forEach((n) => n.addEventListener("click", linkAction));
+document.addEventListener("click", function (event) {
+	const navMenu = document.getElementById("nav-menu");
+	const navToggle = document.getElementById("nav-toggle");
+
+	// Check if the click is outside the menu and the toggle button
+	if (!navMenu.contains(event.target) && !navToggle.contains(event.target)) {
+			navMenu.classList.remove("show-menu");
+	}
+});
+
+
 /*=============== CHANGE BACKGROUND HEADER ===============*/
 const scrollHeader = () => {
   const header = document.getElementById("header");
