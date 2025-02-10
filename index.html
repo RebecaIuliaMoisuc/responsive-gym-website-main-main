@@ -5,9 +5,9 @@
     <!-- tag-uri SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cursuri Inot Bucuresti || Akela SWIM </title>
+    <title>Cursuri Înot Bucuresti || Akela SWIM </title>
     <meta name="Description"
-        content="Descoperă universul captivant al înotului alături de Akela - furnizor de top al cursurilor profesionale de înot pentru toate vârstele în București și Otopeni. Antrenorii experimentați și pasionați îți oferă îndrumare personalizată la cele mai avantajoase prețuri!" />
+
     <link rel="canonical" href="https://akela.ro/">
     <link rel="icon" href="assets/img/akela.jpg" sizes="16x16">
     <meta name="robots" content="ALL, index, follow" />
@@ -67,8 +67,8 @@
 
     <link src="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         
-    <link href="style/normalize.css" rel="stylesheet" type="text/css">
-    <link href="style/bootstrap.min.css" rel="stylesheet" type="text/css"></head>
+
+   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
@@ -84,32 +84,33 @@
         <header class="header" id="header">
             <nav class="nav container">
                 <a href="#" class="nav__logo">
-                    <img src="assets/img/akela.png" alt="logo">AKELA &nbsp; SWIM
+                    <img src="assets/img/akela.png" alt="logo">AKELA SWIMMING CLUB
                 </a>
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="#home" data-offset="50" class="nav__link ">Acasă</a>
+                            <a href="index.html#home" class="nav__link" onclick="navigateToSection(event, '#home')">Acasă</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#about" data-offset="80" class="nav__link ">Despre Noi</a>
+                            <a href="index.html#about" class="nav__link" onclick="navigateToSection(event, '#about')">Despre noi</a>
                         </li>
                         <li class="nav__item">
-                            <a href="#pricing" data-offset="70" class="nav__link ">Abonamente</a>
+                            <a href="index.html#pricing" class="nav__link" onclick="navigateToSection(event, '#pricing')">Abonamente</a>
                         </li>
-
                         <li class="nav__item">
-                            <a href="#galerie" class="nav__link ">Galerie</a>
+                            <a href="index.html#galerie" class="nav__link" onclick="navigateToSection(event, '#galerie')">Galerie</a>
                         </li>
-
                         <li class="nav__item">
-                            <a href="#contact" data-offset="80" class="nav__link ">Contact</a>
+                            <a href="index.html#contact" class="nav__link" onclick="navigateToSection(event, '#contact')">Contact</a>
                         </li>
+                        
 
                         <div class="nav__link">
-                            <a href="#formular" class="button nav__button">
-                                Înscrieri
-                            </a>
+                         <a href="rezervari.html" class="button nav__button" target="_blank">
+                                Rezervări
+                              </a>
+                              
+
                         </div>
                     </ul>
                     <div class="nav__close" id="nav-close">
@@ -122,7 +123,8 @@
                     <i class="ri-menu-line"></i>
                 </div>
             </nav>
-
+           
+              
         </header>
 
         <!--==================== MAIN ====================-->
@@ -133,7 +135,7 @@
 
                     <div class="home__data">
                         <!-- <h2 class="section__title">AKELA SWIMMING CLUB</h2> -->
-                        <h2 class="home__title">Învățăm, înotăm, ne distrăm !</h2>
+                        <h1 class="home__title">Învățăm, înotăm, ne distrăm !</h1>
                         <p class="home__description ">
                             Bucurați-vă de o experiență unică alături de o comunitate pasionată, 
                             dedicată perfecționării abilităților de înot, încurajării sănătății și
@@ -142,7 +144,7 @@
                              Vă invităm să descoperiți Akela Swimming Club, un refugiu al excelenței situat în inima Otopeniului.
                         </p>
                         <a href="#pricing" class="button button__flex">
-                            Abonamente <i class="ri-arrow-right-line"></i>
+                            Abonamente</i>
                         </a>
                     </div>
 
@@ -167,7 +169,7 @@
 
             <section class="section-1" id="about">
                 <div class="section__data">
-                    <h2 class="section__subtitle ">Despre noi</h2>
+                    <h1 class="section__subtitle">Despre noi</h1>
                     <div class="section__titles">
                     </div>
                 </div>
@@ -187,7 +189,7 @@
                     </div>
                     <div class="responsive-container-block Container">
                         <div class="responsive-container-block leftSide">
-                            <p class="text-blk heading">Cine Suntem?</p>
+                            <p class="text-blk heading" style="font-size: larger;">Cine suntem?</p>
                             <p class="text-blk subHeading">
                                 Akela Swimming Club este un club de înot cu antrenori profesioniști care îi ajută, atât pe copii, cât și pe adulți, să învețe să înoate, cu o echipă formată din antrenori tineri, dedicați, prietenoși și înțelegători.
                             </p>
@@ -206,28 +208,29 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <iframe class="video-youtube" allowfullscreen="allowfullscreen" 
-                                            src="https://youtube.com/embed/GDJaiBRWyjw?enablejsapi=1" alt="Inot Akela - cursuri inot" 
-                                            style="border: none; width: 100%; height: 100%;">
-                                    </iframe>
-                                </div>
-                                <div class="carousel-item">
-                                    <iframe class="video-youtube" allowfullscreen="allowfullscreen" 
                                             src="https://youtube.com/embed/bdGb59vL7ok?enablejsapi=1" alt="Inot Akela - cursuri inot" 
                                             style="border: none; width: 100%; height: 100%;">
                                     </iframe>
                                 </div>
                                 <div class="carousel-item">
                                     <iframe class="video-youtube" allowfullscreen="allowfullscreen" 
-                                            src="https://youtube.com/embed/14CRHpZCqfg?enablejsapi=1" alt="Inot Akela - cursuri inot" 
+                                            src="https://youtube.com/embed/OMjU5CVOTeY?enablejsapi=1" alt="Inot Akela - cursuri inot" 
                                             style="border: none; width: 100%; height: 100%;">
                                     </iframe>
                                 </div>
                                 <div class="carousel-item">
                                     <iframe class="video-youtube" allowfullscreen="allowfullscreen" 
-                                            src="https://youtube.com/embed/nF0492oFKJU?enablejsapi=1" alt="Inot Akela - cursuri inot" 
+                                            src="https://youtube.com/embed/tDeOsdvnR_8?enablejsapi=1" alt="Inot Akela - cursuri inot" 
                                             style="border: none; width: 100%; height: 100%;">
                                     </iframe>
                                 </div>
+                                <div class="carousel-item">
+                                    <iframe class="video-youtube" allowfullscreen="allowfullscreen" 
+                                            src="https://youtube.com/embed/0mYs8VMyd2c?enablejsapi=1" alt="Inot Akela - cursuri inot" 
+                                            style="border: none; width: 100%; height: 100%;">
+                                    </iframe>
+                                </div>
+                               
                             </div>
                             <a class="carousel-control-prev" href="#" role="button" data-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -296,7 +299,7 @@
             
 
       <!--=========================  testimoniale =====================================-->
-            <div class="testimoniale-container">
+            <div class="testimoniale-container" id="reservations">
                 <div class="wrapper border-radius">
                     <div class="title"> 
                         <img src="assets/img/Georgiana-modified.png" alt="Work Hard Play Hard Image" class="cristi">
@@ -305,9 +308,13 @@
                        <p ><br>Sunt Georgiana Sava, absolventă a Colegiului Național Emil Racoviță. Am avut 
                         privilegiul de a fi campioană națională la sărituri în apă, la proba de sincron feminin, atât la nivelul juniorilor, cât și la nivelul seniorilor, 
                         obținând, de asemenea, titlul de vicecampioană la proba individuală. De-a lungul a 12 ani de practicare a sportului de performanță, am acumulat o experiență valoroasă în acest domeniu. 
-                       
-                    <br><br>
-                    </p><br>
+                        <br><br>
+                        </p><br><br>
+                        
+                        <a href="rezervari.html" class="button nav__button" target="_blank">
+                            Rezervă o ședință
+                          </a>
+                        <br>
                     </div>
                  </div>
                   
@@ -316,12 +323,29 @@
                     <div class="description">
                         <div class="title"> <img src="assets/img/Cristi-modified.png" class="cristi" alt="Work Hard Play Hard Image"></div>
                         <p ><br>Sunt Cristian Ciupercovici și am o experiență de 8 ani în domeniul natației. Pasiunea și devotamentul m-au condus să înființez Akela Swimming Club, cu scopul de a oferi o educație acvatică de calitate și de a îndruma generațiile viitoare de copii către drumul spre excelență.
- 
                          În ultimii 5 ani, m-am concentrat pe antrenarea copiilor cu vârste cuprinse între 5 și 9 ani în grupurile de performanță, obținând numeroase rezultate remarcabile în competiții. 
                          
+                        </p><br>
+                        <a href="rezervari.html" class="button nav__button" target="_blank">
+                            Rezervă o ședință
+                          </a>
+                        <br>   
                      </div>
-                    
-                    
+                     
+                 </div>
+
+                 <div class="wrapper border-radius">
+                    <div class="description">
+                        <div class="title"> <img src="assets/img/Adam-modified.png" class="cristi" alt="Work Hard Play Hard Image"></div>
+                        <p><br>Sunt Bogdan Adam și practic înotul de mai bine de 12 ani. Am absolvit Liceul cu Program Sportiv Emil Racoviță și sunt student la Universitatea Națională de Educație Fizică și Sport din București.
+                            Cele mai bune rezultate ale mele sunt locul 4 în finala Cupei României la 50 de metri bras și locul 3 la concursul Liga Performanței în Natație la 100 de metri bras. Scopul meu este să ghidez și să susțin cât mai mulți oameni în drumul lor spre realizarea obiectivelor sportive.                  
+                        </p><br>
+                        <a href="rezervari.html" class="button nav__button" target="_blank">
+                            Rezervă o ședință
+                          </a> 
+                            </div>
+                    </div>
+                  
                  </div>
                  
             </div>
@@ -339,7 +363,7 @@
                     <div class="section__data">
                         <h2 class="section__subtitle">Prețuri</h2>
                         <div class="section__titles">
-                            <h3 class="titlu_ab">Abonamente individuale</h3>
+                            <h3 class="titlu_ab" style="font-size: larger;">Abonamente individuale</h3>
                             
                         </div>
                     </div>
@@ -347,7 +371,7 @@
                 <table>
                     <tbody>
                       <tr>
-                        <td>1 &nbsp;Ședința</td>
+                        <td>1 &nbsp;Ședință</td>
                         <td>250 Lei</td>
                       </tr>
                       <tr>
@@ -372,7 +396,7 @@ Această atenție exclusivă asigură o învățare eficientă și rapidă. În 
 Astfel, sesiunile individuale de cursuri de înot oferă un cadru ideal pentru progresul rapid și satisfăcător al fiecărui cursant.
 <br><br>
                     <li>
-                        Ședința individuală se desfășoară 1:1 cu clientul (copil sau adult).
+                        Ședința individuală se desfășoară 1:1 cu clientul (copil sau adult)
                     </li>
                     <li>
                         Durata ședinței este de 50 minute
@@ -384,12 +408,12 @@ Astfel, sesiunile individuale de cursuri de înot oferă un cadru ideal pentru p
                         Abonamentul are o valabilitate de 30 zile
                     </li>
                     <li>
-                        Frații au o reducere de 50% la toate abonamentele individuale (copiii vor lucra cu același antrenor în aceași ședință)
+                        Frații au o reducere de 50% la toate abonamentele individuale (copiii vor lucra cu același antrenor în aceeași ședință)
                     </li>
                 </ul>
 
-                <h3 class="titlu_ab">Abonamente Mini Grup</h3>
-                <p class="subtitlu">Maxim 3 copii în grup</p>
+                <h3 class="titlu_ab" style="font-size: larger;">Abonamente mini grup</h3>
+                <p class="subtitlu">Maximum 3 copii în grup</p>
 
                 <table>
             
@@ -400,13 +424,13 @@ Astfel, sesiunile individuale de cursuri de înot oferă un cadru ideal pentru p
 
                         </tr>
                         <tr>
-                            <td class="td-p">8 &nbsp; Ședinte</td>
+                            <td class="td-p">8 &nbsp; Ședințe</td>
                             <td class="td-i">900 Lei</td>
 
                         </tr>
 
                         <tr>
-                            <td class="td-p">12 &nbsp; Ședinte</td>
+                            <td class="td-p">12 &nbsp; Ședințe</td>
                             <td class="td-i">1200 Lei</td>
 
                         </tr>
@@ -416,14 +440,14 @@ Astfel, sesiunile individuale de cursuri de înot oferă un cadru ideal pentru p
 
                 
                 <ul class="paragraf_ab margin_bottom">
-                    O sesiune de mini-grup, oferă un echilibru perfect între atenția individualizată și dinamismul interacțiunii în grup. 
+                    O sesiune de mini grup oferă un echilibru perfect între atenția individualizată și dinamismul interacțiunii în grup. 
 În primul rând, fiecare cursant beneficiază de atenția directă a instructorului, având oportunitatea de a primi feedback personalizat în timp real. 
-În al doilea rând, interacțiunea cu ceilalți cursanți din mini-grup poate crea un mediu motivant și stimulant, în care aceștia se pot susține reciproc și pot învăța unii de la ceilalți. 
+În al doilea rând, interacțiunea cu ceilalți cursanți din mini grup poate crea un mediu motivant și stimulant, în care aceștia se pot susține reciproc și pot învăța unii de la ceilalți. 
 Această dinamică de grup poate fi deosebit de benefică în dezvoltarea încrederii în sine și în stima de sine a cursanților. 
-În plus, sesiunile de mini-grup sunt o alegere excelentă pentru cei care caută un echilibru între atenția personalizată și avantajele interacțiunii într-un mediu social și motivant.
+În plus, sesiunile de mini grup sunt o alegere excelentă pentru cei care caută un echilibru între atenția personalizată și avantajele interacțiunii într-un mediu social și motivant.
 <br><br>
                     <li>
-                        Ședința de mini grup este susținută de un singur antrenor cu maxim 3 cursanți 
+                        Ședința de mini grup este susținută de un singur antrenor cu maximum 3 cursanți 
                     </li>
                     <li>
                         Durata ședinței este de 50 minute
@@ -440,10 +464,10 @@ Această dinamică de grup poate fi deosebit de benefică în dezvoltarea încre
                 </ul>
 
                 <!-- ab de grup -->
-                <h3 class="titlu_ab">Abonamente Grup</h3>
-                <p class="subtitlu">Maxim 8 copii în grup</p>
+                <h3 class="titlu_ab" style="font-size: larger;">Abonamente grup</h3>
+                <p class="subtitlu">Maximum 8 copii în grup</p>
 
-                <table class="margine_bottom">
+                <table class="">
             
                     <tbody>
                         <tr>
@@ -452,13 +476,13 @@ Această dinamică de grup poate fi deosebit de benefică în dezvoltarea încre
 
                         </tr>
                         <tr>
-                            <td class="td-p">8 &nbsp; Ședinte</td>
+                            <td class="td-p">8 &nbsp; Ședințe</td>
                             <td class="td-i">700 Lei </td>
 
                         </tr>
 
                         <tr>
-                            <td class="td-p">12 &nbsp; Ședinte</td>
+                            <td class="td-p">12 &nbsp; Ședințe</td>
                             <td class="td-i">900 Lei</td>
 
                         </tr>
@@ -468,14 +492,14 @@ Această dinamică de grup poate fi deosebit de benefică în dezvoltarea încre
                     </tbody>
                 </table>
                 <ul class="paragraf_ab margin_bottom">
-                    O sesiune de grup, oferă o experiență dinamică și stimulantă, în care participanții pot beneficia de interacțiunea și suportul unui grup divers. 
+                    O sesiune de grup oferă o experiență dinamică și stimulantă, în care participanții pot beneficia de interacțiunea și suportul unui grup divers. 
                     Prin lucrul într-un mediu de grup, cursanții au oportunitatea de a împărtăși experiențe și de a învăța unii de la alții, ceea ce poate îmbunătăți motivația și progresul în mod semnificativ. 
                     De asemenea, participarea la o sesiune de grup poate crea un sentiment de comunitate și apartenență, întărind legăturile sociale și oferind oportunități de a dezvolta abilități sociale și de comunicare.
                     În plus, o sesiune de grup reprezintă o modalitate excelentă de a învăța înotul într-un mediu social și motivant, în timp ce se bucură de avantajele unei instruiri profesioniste și atent adaptate.
                     
                     <br><br>
                     <li>
-                        Ședința de grup este susținută de unu sau doi antrenori cu maxim 8 cursanți                    
+                        Ședința de grup este susținută de unu sau doi antrenori cu maximum 8 cursanți                    
                      </li>
                     <li>
                         Durata ședinței este de 50 minute
@@ -491,7 +515,7 @@ Această dinamică de grup poate fi deosebit de benefică în dezvoltarea încre
                      </li>
                 </ul>
                 <!-- pregatire performanta -->
-                <h3 class="titlu_ab">Pregătire - performanță</h3>
+                <h3 class="titlu_ab" style="font-size: larger;">Pregătire - performanță</h3>
                 <p class="subtitlu">Abonament lunar și recurent</p>
                 <table>
             
@@ -512,11 +536,13 @@ Această dinamică de grup poate fi deosebit de benefică în dezvoltarea încre
                     </tbody>
                 </table>
                 <ul class="paragraf_ab margin_bottom">
-                    O sesiune de pregătire pentru performanța în domeniul nației este meticulos concepută pentru a optimiza fiecare aspect al abilităților și condiții fizice ale înotătorilor. Scopul acestei sesiuni este de a pregăti sportivii pentru competiții de înalt nivel, asigurându-se că fiecare participant îți atinge potențialul maxim. Sesiunea, cu o durată de 90 de minute, permite cursanților să beneficieze de un antrenament echilibrat și intensiv, optimizat pentru a dezvolta atât abilități tehnice, cât și condiția fizică necesară pentru a excela în competiții de înot.
+                    O sesiune de pregătire pentru performanță în domeniul natației este meticulos concepută pentru a optimiza fiecare aspect al abilităților și 
+                    condiții fizice ale înotătorilor. Scopul acestei sesiuni este de a pregăti sportivii pentru competiții de înalt nivel, 
+                    asigurându-se că fiecare participant își atinge potențialul maxim. Sesiunea, cu o durată de 90 de minute, permite cursanților să beneficieze de un antrenament echilibrat și intensiv, optimizat pentru a dezvolta atât abilități tehnice, cât și condiția fizică necesară pentru a excela în competiții de înot.
                     
                     <br><br>
                     <li>
-                        Ședința de grup este susținută de unu sau doi antrenori cu maxim 8 cursanți                    
+                        Ședința de grup este susținută de unu sau doi antrenori cu maximum 8 cursanți                    
                      </li>
                     <li>
                         Durata ședinței este de 50 minute
@@ -536,6 +562,102 @@ Această dinamică de grup poate fi deosebit de benefică în dezvoltarea încre
 
             <!-- ==================================end tabel abonamente=========================================== -->
 
+<!--==================== VOUCHER SECTION ====================-->
+<section class="voucher section" id="voucher">
+    <div class="container">
+        <div class="section__data">
+            <h2 class="section__subtitle">Voucher cadou </h2>
+           
+        </div>
+
+        <div class="voucher__content">
+            <div class="voucher__image">
+                <img src="assets/img/Voucher Standard.png" alt="Voucher Cadou Akela Swim">
+            </div>
+            <div class="paragraf_ab" style="text-align: left;">
+                <p>
+                    Vrei să faci un cadou special cuiva drag? Acum poți achiziționa vouchere cadou pentru lecții de înot la Akela Swimming Club!
+Pentru cine este potrivit?
+                </p>
+                <ul>
+                    <li>Începători care vor să prindă încredere în apă</li>
+                    <li> Iubitori de mișcare și fitness</li>
+                    <li>Oricine iubește apa și mișcarea</li>
+                </ul>
+                <p>
+                    Cum îl poți achiziționa?
+                    Trimite-ne un mesaj pe WhatsApp la 
+                    <a href="https://wa.me/40764365817" target="_blank" style="color: var(--first-color);">0764.365.817</a>
+                    sau un e-mail la 
+                    <span style="color: var(--first-color);">academy.akela@gmail.com</span></a> și achiziționează voucherul tău astăzi!
+                  </p>
+                  
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--==================== CSS STYLES ====================-->
+<style>
+    .voucher {
+        text-align: center;
+        padding: 50px 0;
+       
+    }
+
+    .voucher__content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .voucher__image img {
+        max-width: 60%;
+        height: auto;
+        border: 3px solid white !important;
+        border-radius: 15px;
+        
+    }
+
+    .voucher__description {
+        max-width: 50vw;
+        text-align: left;
+    }
+
+    .voucher__description p {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+    .voucher__description ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .voucher__description li {
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+
+
+    @media (max-width: 768px) {
+        .voucher__content {
+            flex-direction: column;
+            text-align: center;
+        }
+        .voucher__description {
+            text-align: center;
+        }
+        .voucher__image img {
+        max-width: 80%;
+        height: auto;
+       
+        
+    }
+    }
+</style>
 
 
 
@@ -659,12 +781,12 @@ Această dinamică de grup poate fi deosebit de benefică în dezvoltarea încre
            
             <!--========GALLERY 2========-->
            
-            <ul class="paragraf_ab text-galerie">Creionează aventuri de neuitat și colectează momente frumoase, nu lucruri!</ul>
+            <ul class="paragraf_ab text-galerie" style="font-size: larger;">Creionează aventuri de neuitat și colectează momente frumoase, nu lucruri!</ul>
             <ul class="paragraf_ab margin_bottom">
-                Asta facem noi la Akela Swim, împreuna cu micuții noștri înotători!
+                Asta facem noi la Akela Swimming Club, împreună cu micuții noștri înotători!
                 Pentru ca mai tarziu, să ne amintim cu drag de fiecare început cu emoții, de fiecare progres plin de
                 curaj, de fiecare
-                zâmbet sincer și de toata energia bună a acestora &#x1F497;
+                zâmbet sincer și de toată energia bună a acestora. &#x1F497;
             </ul>
 
             </div>
@@ -685,25 +807,30 @@ Această dinamică de grup poate fi deosebit de benefică în dezvoltarea încre
                 <div class="contact-body-nou">
                     <div class="contact-info-nou">
 
-                        <div>
-                            <span><i class="fas fa-mobile-alt"></i></span>
-                            <h3>Telefon</h3>
-                            <span class="text-nou">0764 365 817</span>
-                        </div>
+                        <a href="https://api.whatsapp.com/send?phone=40764365817" target="_blank">
+                            <div>
+                                <span>
+                                    <i class="fas fa-mobile-alt" style="color: var(--first-color)"></i>
+                                </span>
+                                <h3>Telefon</h3>
+                                <span class="text-nou" style="color: var(--text-color);">0764 365 817</span>
+                            </div>
+                        </a>
+                        
 
                         <div>
-                            <span><i class="fas fa-map-marker-alt"></i></span>
+                            <span><i class="fas fa-map-marker-alt" style="color: var(--first-color)"></i></span>
                             <h3>Adresă</h3>
                             <span class="text-nou">Complex Sportiv de Natație Otopeni, Str. Gării nr. 5-11, Otopeni.
                             </span>
                         </div>
                         <div>
-                            <span><i class="fas fa-envelope-open"></i></span>
+                            <span><i class="fas fa-envelope-open" style="color: var(--first-color)"></i></span>
                             <h3>E-mail</h3>
                             <span class="text-nou">academy.akela@gmail.com</span>
                         </div>
                         <div>
-                            <span><i class="fas fa-clock"></i></span>
+                            <span><i class="fas fa-clock" style="color: var(--first-color)"></i></span>
                             <h3>Program</h3>
                             <span class="text-nou">Luni-Vineri &#160;:&#160; 09:00 - 21:00 </span>
                             <span class="text-nou">Weekend &#160;:&#160; 09:00 - 18:00 </span>
@@ -720,7 +847,7 @@ Această dinamică de grup poate fi deosebit de benefică în dezvoltarea încre
                                     pattern="[a-zA-Z\s]+" title="Introduceți un nume valid (doar litere și spații)">
                             </div>
                             <div>
-                                <input type="email" class="form-control" placeholder="mail@gmail.com" id="user-email"
+                                <input type="email" class="form-control" placeholder="email@gmail.com" id="user-email"
                                     required>
                                 <input type="text" class="form-control" placeholder="Telefon" id="user-phone" required
                                     pattern="[0-9]{10}" title="Introduceți un număr de telefon valid (10 cifre).">
@@ -728,19 +855,16 @@ Această dinamică de grup poate fi deosebit de benefică în dezvoltarea încre
                             <textarea rows="5" placeholder="Mesaj" class="form-control" id="user-message"
                                 required></textarea>
                             <button type="submit" class="button button__flex submit-btn">
-                                Trimite <i class="ri-arrow-right-line"></i>
+                              <span></span>  Trimite <span></span></i>
                             </button>
                         </form>
 
                         <div>
-
                             <iframe class="harta"
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2843.7511677717434!2d26.07836037608984!3d44.5407272710739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b21daf942a2645%3A0x1dba48024c81110!2sAkela%20Swimming%20Club!5e0!3m2!1sro!2sro!4v1706557812283!5m2!1sro!2sro"
                                 width="100%" height="450" frameborder="0"
                                 style="border-radius:1.5rem; filter: invert(90%);" allowfullscreen=""
                                 aria-hidden="false" tabindex="0"></iframe>
-
-
                         </div>
                     </div>
                 </div>
@@ -748,19 +872,19 @@ Această dinamică de grup poate fi deosebit de benefică în dezvoltarea încre
 
                 <!-- footer -->
                 <div class="contact-footer">
-                    <h3>Urmarește-ne</h3>
+                    <h3>Urmărește-ne</h3>
                     <div class="social-links">
-                        <a href="https://www.facebook.com/akelaswimmingclub/" class="fab fa-facebook-f"></a>
+                        <a href="https://www.facebook.com/akelaswimmingclub/" class="fab fa-facebook-f" target="_blank"></a>
 
                         <a href="https://www.instagram.com/akela.swim/?igsh=M3pzYnRtZnY5dzdz"
-                            class="fab fa-instagram"></a>
+                        target="_blank" class="fab fa-instagram"></a>
 
-                        <a href="https://www.youtube.com/channel/UCUKP4ZNn6Nz8tggHGegIn_Q" class="fab fa-youtube"></a>
+                        <a href="https://www.youtube.com/channel/UCUKP4ZNn6Nz8tggHGegIn_Q" class="fab fa-youtube" target="_blank"></a>
 
-                        <a href="https://www.tiktok.com/@akela.swim" class="fab fa-tiktok"></a>
+                        <a href="https://www.tiktok.com/@akela.swim" class="fab fa-tiktok" target="_blank"></a>
                     </div>
-                    <h3> &#169; Powered by <span><a href="https://techwebwizards.ro/" target="_blank">TechWeb
-                                Wizards</a></span></h3>
+                    <!-- <h3> &#169; Powered by <span><a href="https://techwebwizards.ro/" target="_blank">TechWeb
+                                Wizards</a></span></h3> -->
                                 
                 </div>
             </section>
@@ -858,6 +982,109 @@ Această dinamică de grup poate fi deosebit de benefică în dezvoltarea încre
                     document.getElementById('user-message').value = '';
                 });
             </script>
+
+<style>
+    /* Stilizare modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .modal-content {
+        background-color: white;
+        margin: 5% auto;
+        width: 70%;
+        height: 87%;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .close {
+        color: black;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: right;
+        padding: 10px;
+    }
+
+    .close:hover {
+        color: black;
+    }
+    @media screen and (max-width: 600px) {
+        .modal-content {
+            width: 100vw !important;
+            height: 100%;
+            margin: 0 auto;
+            border-radius: 0;
+        }
+    }
+    body.no-scroll {
+        overflow: hidden;
+        height: 100vh;
+    }
+    
+</style>
+</head>
+<script>
+    function navigateToSection(event, sectionId) {
+      event.preventDefault();
+      const currentPath = window.location.pathname;
+      
+      if (currentPath.includes('index.html')) {
+        // Navighează direct la secțiune dacă ești pe index.html
+        document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // Redirecționează la index.html și navighează la secțiune
+        window.location.href = 'index.html' + sectionId;
+      }
+    }
+  </script>
+</body>
+
+
+
+<!-- Modal pentru iframe -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+       <iframe src="https://koalendar.com/e/testnou?embed=true" height="100%" frameborder="0"></iframe>
+    </div>
+</div>
+
+<script>
+    
+    const modal = document.getElementById("modal");
+    const btn = document.getElementById("openModal");
+    const closeBtn = document.querySelector(".close");
+
+    // Deschide modalul când butonul este apăsat
+    btn.addEventListener("click", function (event) {
+        event.preventDefault(); // Previne comportamentul implicit al link-ului
+        modal.style.display = "block";
+        document.body.classList.add("no-scroll");
+    });
+
+    // Închide modalul când se apasă butonul de închidere
+    closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+        document.body.classList.remove("no-scroll");
+    });
+
+    // Închide modalul când se apasă în afara lui
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+</script>
     </body>
+
 
 </html>

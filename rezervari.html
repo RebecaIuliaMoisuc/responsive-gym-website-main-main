@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervări || Akela SWIMMING CLUB</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+
+    <link rel="stylesheet" href="../responsive-gym-website-main/assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/akela.jpg" type="image/x-icon">
+
+    <!--=============== REMIXICON ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+
+    <!--=============== BOOTSTRAP 5 =========-->
+   
+    
+    <!-- Bootstrap CSS -->
+    <!-- Bootstrap JS -->
+    
+
+
+   
+        
+
+   
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <img src="assets/img/akela.png" alt="logo"> AKELA SWIMMING CLUB
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html#home" class="nav__link" onclick="navigateToSection(event, '#home')">Acasă</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#about" class="nav__link" onclick="navigateToSection(event, '#about')">Despre noi</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#pricing" class="nav__link" onclick="navigateToSection(event, '#pricing')">Abonamente</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#galerie" class="nav__link" onclick="navigateToSection(event, '#galerie')">Galerie</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#contact" class="nav__link" onclick="navigateToSection(event, '#contact')">Contact</a>
+                    </li>
+                    
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <section class="section mt-5" id="rezervari" >
+            <div class="container" >
+                <div class="section__data">
+                    <h1 class="section__subtitle  mt-5 mb-5">Alege antrenorul preferat</h1>
+                    <div class="section__titles">
+                    </div>
+                </div>
+                <div class="antrenori-container mt-5">
+                    <!-- Antrenor 1 -->
+                    <div class="antrenor-item border-radius">
+                        <img src="assets/img/Georgiana-modified.png" alt="Georgiana Sava">
+                        <div class="antrenor-info">
+                            <h3>Georgiana Sava</h3>
+                            
+                            <a href="#" class="button button__flex submit-btn" id="openModal">Rezervă o ședință</a>
+                        </div>
+                    </div>
+                    <!-- Antrenor 2 -->
+                    <div class="antrenor-item border-radius">
+                        <img src="assets/img/Cristi-modified.png" alt="Cristian Ciupercovici">
+                        <div class="antrenor-info">
+                            <h3>Cristian Ciupercovici</h3>
+                            <a href="#" class="button button__flex submit-btn" id="openModal2">Rezervă o ședință</a>
+                        </div>
+                    </div>
+                    <!-- Antrenor 3 -->
+                    <div class="antrenor-item border-radius">
+                        <img src="assets/img/Adam-modified.png" alt="Bogdan Adam">
+                        <div class="antrenor-info">
+                            <h3>Bogdan Adam</h3>
+                            <a href="#" class="button button__flex submit-btn" id="openModal3">
+                                Rezervă o ședință
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+
+    <!--==================== FOOTER ====================-->
+    <footer class="contact-footer">
+        <h3>Urmărește-ne</h3>
+        <div class="social-links">
+            <a href="https://www.facebook.com/akelaswimmingclub/" class="fab fa-facebook-f" target="_blank"></a>
+            <a href="https://www.instagram.com/akela.swim/" target="_blank" class="fab fa-instagram"></a>
+            <a href="https://www.youtube.com/channel/UCUKP4ZNn6Nz8tggHGegIn_Q" class="fab fa-youtube" target="_blank"></a>
+            <a href="https://www.tiktok.com/@akela.swim" class="fab fa-tiktok" target="_blank"></a>
+        </div>
+    </footer>
+</main>
+    <style>
+       .antrenori-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.antrenor-item {
+    flex: 1 1 calc(33.33% - 30px);
+    max-width: calc(33.33% - 30px);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 3px solid var(--first-color);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color:#090909;
+}
+
+.antrenor-item img {
+    max-width: 120px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.antrenor-info {
+    flex: 1;
+    text-align: center;
+}
+
+.antrenor-info h3 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.antrenor-info p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 992px) {
+  .antrenor-item {
+      flex: 1 1 calc(50% - 30px);
+      max-width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 768px) {
+  .antrenor-item {
+      flex: 1 1 100%;
+      max-width: 100%;
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .antrenor-item img {
+      margin-bottom: 10px;
+      max-width: 100px;
+  }
+}
+
+body {
+  background-color:#090909; /* Folosește aceeași culoare definită */
+  color: var(--text-color, #fff); /* Asigură contrastul pentru text */
+}
+.section__subtitle{
+    transform: rotate(0deg);
+}
+ /* Stilizare modal */
+ .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .modal-content {
+        background-color: white;
+        margin: 5% auto;
+        width: 70%;
+        height: 87%;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .close {
+        color: black;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: right;
+        padding: 10px;
+    }
+
+    .close:hover {
+        color: black;
+    }
+    @media screen and (max-width: 600px) {
+        .modal-content {
+            width: 100% !important;
+            height: 100%;
+            margin: 0 auto;
+            border-radius: 0;
+        }
+        .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100vw !important;
+        height: 100%;
+    }
+    }
+    body.no-scroll {
+        overflow: hidden;
+        height: 100vh;
+    }
+    
+</style>
+
+    </style>
+    
+    <script>
+        function navigateToSection(event, sectionId) {
+          event.preventDefault();
+          const currentPath = window.location.pathname;
+          
+          if (currentPath.includes('index.html')) {
+            // Navighează direct la secțiune dacă ești pe index.html
+            document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
+          } else {
+            // Redirecționează la index.html și navighează la secțiune
+            window.location.href = 'index.html' + sectionId;
+          }
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+  const header = document.querySelector(".header");
+  const firstSection = document.querySelector(".section");
+  firstSection.style.paddingTop = `${header.offsetHeight}px`;
+});
+    </script>
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+       <iframe src="https://koalendar.com/e/sedinta-georgiana?embed=true"  width="100%" height="800px" frameborder="0"></iframe>
+    </div>
+</div>
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe src="https://koalendar.com/e/sedinta-cristi?embed=true" width="100%" height="800px" frameborder="0"></iframe>
+    </div>
+</div>
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe src="https://koalendar.com/e/sedinta-bogdan?embed=true" width="100%" height="800px" frameborder="0"></iframe>
+    </div>
+</div>
+
+<script>
+    
+    document.addEventListener("DOMContentLoaded", function () {
+    function setupModal(modalId, buttonId) {
+        const modal = document.getElementById(modalId);
+        const btn = document.getElementById(buttonId);
+        const closeBtn = modal.querySelector(".close");
+
+        btn.addEventListener("click", function (event) {
+            event.preventDefault();
+            modal.style.display = "block";
+            document.body.classList.add("no-scroll");
+        });
+
+        closeBtn.addEventListener("click", function () {
+            modal.style.display = "none";
+            document.body.classList.remove("no-scroll");
+        });
+
+        window.addEventListener("click", function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+                document.body.classList.remove("no-scroll");
+            }
+        });
+    }
+
+    // Inițializează toate modalele
+    setupModal("modal", "openModal");
+    setupModal("modal2", "openModal2");
+    setupModal("modal3", "openModal3");
+});
+
+      </script>
+      <script src="assets/js/main.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const navMenu = document.getElementById("nav-menu"),
+        navToggle = document.getElementById("nav-toggle"),
+        navClose = document.getElementById("nav-close");
+
+    // Afișează meniul
+    if (navToggle) {
+        navToggle.addEventListener("click", () => {
+            navMenu.classList.add("show-menu");
+        });
+    }
+
+    // Închide meniul
+    if (navClose) {
+        navClose.addEventListener("click", () => {
+            navMenu.classList.remove("show-menu");
+        });
+    }
+
+    // Închide meniul când dai click pe un link din meniu (pentru UX mai bun pe mobil)
+    const navLinks = document.querySelectorAll(".nav__link");
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            navMenu.classList.remove("show-menu");
+        });
+    });
+
+    // Închide meniul când se dă click în afara lui
+    document.addEventListener("click", function (event) {
+        if (!navMenu.contains(event.target) && !navToggle.contains(event.target)) {
+            navMenu.classList.remove("show-menu");
+        }
+    });
+});
+
+      </script>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
