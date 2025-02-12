@@ -259,7 +259,7 @@ a {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  max-width: 90%;
+  
   margin: 0 auto;
   padding-top: 1rem;
   padding-bottom: 1 rem;
@@ -1309,13 +1309,13 @@ html::-webkit-scrollbar-thumb:hover {
 
   .section-center.about-center {
     font-size: 0.75rem;
-
+  }
     .section-center.about-img {
       max-width: 1000px;
       margin: 0 auto !important;
     }
   }
-}
+
 
 @media screen and (max-width: 340px) {
   .container {
