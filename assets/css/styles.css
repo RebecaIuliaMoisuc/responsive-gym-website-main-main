@@ -68,11 +68,11 @@
 
 table  {
   width: 50vw;
-  border-collapse: separate;  /* Permite aplicarea border-radius */
+  border-collapse: separate;  
   border-spacing: 0;  
   margin: 0 auto;
   text-align: center !important;
-  border: 2px solid white;
+  border: 2.5px solid white;
   border-radius: 15px;        
   overflow: hidden; 
 }
@@ -98,6 +98,7 @@ table  {
     padding-right: 1rem;
   }
 }
+
 
 th {
   background: var(--first-color);
@@ -165,7 +166,8 @@ th {
   th, td {
     padding: 8px;
     text-align: center;
-    border-bottom: 1px solid #ddd;
+    color: white;
+   
   }
 
   th {
@@ -176,11 +178,31 @@ th {
     table {
       overflow-x: scroll;
     }
+    table {
+      width: 90vw;
+      overflow: hidden;
+      border-collapse: separate;
+      border-spacing: 0;  
+    }
+    table tr:first-child th:first-child {
+      border-top-left-radius: 15px;
+    }
+  
+    table tr:first-child th:last-child {
+      border-top-right-radius: 15px;
+    }
+  
+    table tr:last-child td:first-child {
+      border-bottom-left-radius: 15px;
+    }
+  
+    table tr:last-child td:last-child {
+      border-bottom-right-radius: 15px;
+    }
   }
                 
 .paragraf_ab {
   list-style: none;
-  /* Remove default bullets */
 }
 
 .subtitlu {
@@ -189,18 +211,13 @@ th {
 
 .paragraf_ab li::before {
   content: "\2022";
-  /* Add content: \2022 is the CSS Code/unicode for a bullet */
   color: #ed1c76;
   font-size: larger;
-  /* Change the color */
   font-weight: bold;
-  /* If you want it to be bold */
+  
   display: inline-block;
-  /* Needed to add space between the bullet and the text */
   width: 1em;
-  /* Also needed for space (tweak if needed) */
   margin-left: -1em;
-  /* Also needed for space (tweak if needed) */
 }
 /*=============== BASE ===============*/
 * {
@@ -253,7 +270,6 @@ a {
   height: 90vh;
 }
 
-/* Adauga aceste reguli CSS pentru a face sectiunea section-1 responsive */
 
 .section__data,
 .about-center {
@@ -291,7 +307,7 @@ a {
 }
 
 .main {
-  overflow: hidden; /* For animation ScrollReveal */
+  overflow: hidden; 
 }
 
 .color-red {
@@ -301,7 +317,9 @@ a {
 .color-green {
   color: var(--first-color);
 }
-
+.container-100{
+  width: 100%;
+}
 /*=============== HEADER & NAV ===============*/
 .header {
   width: 100%;
@@ -333,7 +351,7 @@ a {
 }
 .nav__logo img {
   width: 6.5rem;
-  margin-left: 0.8rem;
+  /* margin-left: 0.8rem; */
   margin-right: -15px !important;
 }
 .nav__toggle {
@@ -424,16 +442,12 @@ a {
   background-size: auto, cover;
   z-index: -1;
   opacity: 0.6;
-  /* Place the overlay behind the content */
 
-  /* Adjust the opacity as needed */
 }
 
-/* Add this style to adjust the positioning of the content */
 .home__container {
   position: relative;
   z-index: 1;
-  /* Ensure the content is above the overlay */
 }
 
 .home {
@@ -488,13 +502,6 @@ a {
   position: relative;
   z-index: 2;
 }
-/* .imagine{
-  height: 35rem !important;
-  width: 7rem !important;
-  margin-left: 7rem;
-  z-index: -100;
-  
-} */
 
 /* ======= GALLERY ============ */
 
@@ -1001,7 +1008,7 @@ i {
   transform: translateY(1rem);
 }
 .margin-top {
-  margin-top: 6rem !important;
+  margin-top: 3rem !important;
 }
 .formular {
   width: max-content;
@@ -1235,11 +1242,12 @@ html::-webkit-scrollbar-thumb:hover {
   color: white;
 }
 
-/* .scrollUp {
+
+.scrollUp {
   position: fixed;
-  right: 2rem !important;
-  bottom: 2% !important;
-  background-color: var(--first-color);
+  right: 2rem; 
+  bottom: 2rem; 
+  background-color: var(--first-color); 
   display: inline-flex;
   padding: 0.35rem;
   color: white;
@@ -1247,31 +1255,12 @@ html::-webkit-scrollbar-thumb:hover {
   transition: 0.3s;
   z-index: 100000;
 }
-.scrollUp:hover {
-  transform: translateY(-0.25rem);
-  color: white;
-}
-
-/* Show Scroll Up*/.scrollUp {
-  position: fixed;
-  right: 2rem; /* Adjust the distance from the right edge */
-  bottom: 2rem; /* Adjust the distance from the bottom edge */
-  background-color: var(--first-color); /* Set the background color to pink */
-  display: inline-flex;
-  padding: 0.35rem;
-  color: white; /* Set the arrow color to white */
-  font-size: var(--z-tooltip);
-  transition: 0.3s;
-  z-index: 100000;
-   /* Optional: Make the button circular */
-}
 
 .scrollUp:hover {
   transform: translateY(-0.25rem);
-  color: white; /* Ensure the arrow remains white on hover */
+  color: white; 
 }
 
-/* Show Scroll Up */
 .show-scroll {
   bottom: 3rem;
 }
@@ -1279,23 +1268,23 @@ html::-webkit-scrollbar-thumb:hover {
 /* Media queries for different screen sizes */
 @media (max-width: 768px) {
   .scrollUp {
-    right: 1rem; /* Adjust the distance for smaller screens */
-    bottom: 1.5rem; /* Adjust the distance for smaller screens */
+    right: 1rem; 
+    bottom: 1.5rem; 
   }
 
   .show-scroll {
-    bottom: 2.5rem; /* Adjust the distance for smaller screens */
+    bottom: 2.5rem; 
   }
 }
 
 @media (max-width: 480px) {
   .scrollUp {
-    right: 1rem; /* Adjust the distance for very small screens */
-    bottom: 0.7rem; /* Adjust the distance for very small screens */
+    right: 1rem; 
+    bottom: 0.7rem; 
   }
 
   .show-scroll {
-    bottom: 1.5rem; /* Adjust the distance for very small screens */
+    bottom: 1.5rem; 
   }
 }
 
@@ -1303,18 +1292,18 @@ html::-webkit-scrollbar-thumb:hover {
 /*=============== BREAKPOINTS ===============*/
 
 .section-center.about-center.margin {
-  max-width: 1200px; /* sau oricare altă valoare potrivită pentru design-ul tău */
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .section-center.about-img {
-  max-width: 1200px; /* sau oricare altă valoare potrivită pentru design-ul tău */
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 768px) {
   .section-center.about-center.margin {
-    max-width: 90%; /* sau oricare altă valoare potrivită pentru design-ul tău pe ecrane mici */
+    max-width: 90%; 
     margin: 0 auto;
   }
 
@@ -1328,7 +1317,6 @@ html::-webkit-scrollbar-thumb:hover {
   }
 }
 
-/* For small devices */
 @media screen and (max-width: 340px) {
   .container {
     margin-right: 1rem;
@@ -1479,9 +1467,6 @@ html::-webkit-scrollbar-thumb:hover {
     background-size: cover;
     z-index: -1;
     opacity: 0.4;
-    /* Place the overlay behind the content */
-
-    /* Adjust the opacity as needed */
   }
   .home__title {
     text-wrap: balance;
@@ -1533,7 +1518,7 @@ html::-webkit-scrollbar-thumb:hover {
     margin: 0.75rem 0 1.25rem;
   }
   .home__description {
-    width: 445px;
+    
     margin-bottom: 3rem;
   }
   .home__img {
@@ -2070,7 +2055,7 @@ html::-webkit-scrollbar-thumb:hover {
   /* margin-left: 20px;  */
   display: flex;
   flex-direction: column;
-  justify-content: left; /* Adăugăm această linie */
+  justify-content: left; 
   /* margin-right: 2rem !important; */
   margin: 0 auto;
 }
@@ -2097,7 +2082,7 @@ html::-webkit-scrollbar-thumb:hover {
     }
     
     .rightSide {
-        width: 90vw;
+        /* width: 90vw; */
         margin-top: 20px;
         margin-left:10px !important
     }
@@ -2248,7 +2233,7 @@ html::-webkit-scrollbar-thumb:hover {
 /* Media query for smaller screens for map and contact section*/
 @media (max-width: 768px) {
   .schedule h3 {
-    font-size: 1.3rem; /* Adjust the font size as needed */
+    font-size: 1.3rem; 
   }
 }
 .schedule h3 {
@@ -2270,11 +2255,9 @@ html::-webkit-scrollbar-thumb:hover {
 .map {
   flex: 1;
   width: calc(50% - 10px);
-  /* Adjust margin between sections */
   margin-bottom: 20px;
 }
 
-/* Add your own styles for schedule and map content */
 .schedule {
   background-color: var(--primary-color);
   padding: 20px;
@@ -2295,22 +2278,22 @@ html::-webkit-scrollbar-thumb:hover {
 .about-section-1 {
   display: flex;
   flex-wrap: wrap;
-  padding: 40px; /* Increased padding for the larger container */
+  padding: 40px; 
 }
 
 .text-1 {
   flex: 1;
-  padding: 20px; /* Padding for the text */
+  padding: 20px; 
 }
 
 .video {
   flex: 1;
   position: relative;
-  overflow: hidden; /* Ensure the video remains visible on smaller screens */
+  overflow: hidden; 
 }
 
 .video iframe {
-  width: 80%; /* Reduced width for the video */
+  width: 80%; 
   height: 100%;
   position: absolute;
   top: 0;
@@ -2324,13 +2307,13 @@ html::-webkit-scrollbar-thumb:hover {
   }
 
   .video {
-    order: 2; /* Move the video below the text on smaller screens */
+    order: 2; 
   }
 
   .text-1,
   .video {
     flex: 1;
-    width: 100%; /* Ensure full width on smaller screens */
+    width: 100%; 
   }
 }
 .contact-form-nou {
@@ -2359,13 +2342,6 @@ html::-webkit-scrollbar-thumb:hover {
   font-size: 1.3rem;
   font-weight: 400;
 }
-
-/* .contact-bg-nou h2 {
-  font-size: 2rem;
-  text-transform: uppercase;
-  padding: 0.4rem 0;
-  letter-spacing: 4px;
-} */
 
 .line div {
   margin: 0 0.2rem;
@@ -2566,7 +2542,7 @@ html::-webkit-scrollbar-thumb:hover {
   }
   .harta {
     width: 600px !important;
-  margin-left: 10px;
+    margin: 0 auto;
     
   }
   .contact-form-nou {
@@ -2743,11 +2719,6 @@ html::-webkit-scrollbar-thumb:hover {
     }
 }
 
-/* body {
-  background-color: #000;
-  margin: 0;
-  overflow: hidden;
-} */
 
 canvas {
   position: absolute;
@@ -2775,16 +2746,6 @@ canvas {
     display: none;
   }
 }
-
-
-/* @media (min-width: 766px) {
-  .slideshow-container {
-    display: none;
-  }
-  .dot{
-    display: none; 
-  }
-} */
 
 /* <!--====================galerie noua ====================--> */
  
@@ -2978,7 +2939,7 @@ canvas {
     .description {
       display: block;
       width: 100%;
-      text-align: center; /* Ajustează textul la centru */
+      text-align: center; 
     }
   }
   @media (max-width: 767px) {
@@ -2986,11 +2947,11 @@ canvas {
     .description {
       display: block;
       width: 100%;
-      text-align: center; /* Ajustează textul la centru */
+      text-align: center; 
     }
   
     .title {
-      padding-bottom: 10px; /* Adaugă un spațiu mic între imagine și text */
+      padding-bottom: 10px; 
     }
     .scrollUp{
     position: fixed;
@@ -3042,7 +3003,6 @@ canvas {
   border-radius: 20px !important;
 }
  
-
 /* Add this CSS to style the arrows */
 
 /* Style for the arrow buttons */
@@ -3183,4 +3143,63 @@ margin: 0 auto !important;
 .carousel-control-next-icon {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
+}
+
+.voucher {
+  text-align: center;
+  padding: 50px 0;
+ 
+}
+
+.voucher__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.voucher__image img {
+  max-width: 60%;
+  height: auto;
+  border: 3px solid white !important;
+  border-radius: 15px;
+  
+}
+
+.voucher__description {
+  max-width: 50vw;
+  text-align: left;
+}
+
+.voucher__description p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.voucher__description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.voucher__description li {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+
+@media (max-width: 768px) {
+  .voucher__content {
+      flex-direction: column;
+      text-align: center;
+  }
+  .voucher__description {
+      text-align: center;
+  }
+  .voucher__image img {
+  max-width: 100%;
+  height: auto;
+ 
+  
+}
 }

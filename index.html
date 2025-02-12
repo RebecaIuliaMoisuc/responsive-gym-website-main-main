@@ -82,7 +82,7 @@
         <link rel="stylesheet" href="assets/css/styles.css">
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
-            <nav class="nav container">
+            <nav class="nav container container-100">
                 <a href="#" class="nav__logo">
                     <img src="assets/img/akela.png" alt="logo">AKELA SWIMMING CLUB
                 </a>
@@ -599,64 +599,7 @@ Pentru cine este potrivit?
 
 <!--==================== CSS STYLES ====================-->
 <style>
-    .voucher {
-        text-align: center;
-        padding: 50px 0;
-       
-    }
-
-    .voucher__content {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
-    }
-
-    .voucher__image img {
-        max-width: 60%;
-        height: auto;
-        border: 3px solid white !important;
-        border-radius: 15px;
-        
-    }
-
-    .voucher__description {
-        max-width: 50vw;
-        text-align: left;
-    }
-
-    .voucher__description p {
-        font-size: 1.1rem;
-        margin-bottom: 15px;
-    }
-
-    .voucher__description ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    .voucher__description li {
-        font-size: 1rem;
-        margin: 5px 0;
-    }
-
-
-    @media (max-width: 768px) {
-        .voucher__content {
-            flex-direction: column;
-            text-align: center;
-        }
-        .voucher__description {
-            text-align: center;
-        }
-        .voucher__image img {
-        max-width: 80%;
-        height: auto;
-       
-        
-    }
-    }
+ 
 </style>
 
 
@@ -784,7 +727,7 @@ Pentru cine este potrivit?
             <ul class="paragraf_ab text-galerie" style="font-size: larger;">Creionează aventuri de neuitat și colectează momente frumoase, nu lucruri!</ul>
             <ul class="paragraf_ab margin_bottom">
                 Asta facem noi la Akela Swimming Club, împreună cu micuții noștri înotători!
-                Pentru ca mai tarziu, să ne amintim cu drag de fiecare început cu emoții, de fiecare progres plin de
+                Pentru ca mai târziu, să ne amintim cu drag de fiecare început cu emoții, de fiecare progres plin de
                 curaj, de fiecare
                 zâmbet sincer și de toată energia bună a acestora. &#x1F497;
             </ul>
@@ -813,7 +756,7 @@ Pentru cine este potrivit?
                                     <i class="fas fa-mobile-alt" style="color: var(--first-color)"></i>
                                 </span>
                                 <h3>Telefon</h3>
-                                <span class="text-nou" style="color: var(--text-color);">0764 365 817</span>
+                                <span class="text-nou" style="color: var(--text-color);">0764.365.817</span>
                             </div>
                         </a>
                         
@@ -1038,10 +981,10 @@ Pentru cine este potrivit?
       const currentPath = window.location.pathname;
       
       if (currentPath.includes('index.html')) {
-        // Navighează direct la secțiune dacă ești pe index.html
+       
         document.querySelector(sectionId).scrollIntoView({ behavior: 'smooth' });
       } else {
-        // Redirecționează la index.html și navighează la secțiune
+       
         window.location.href = 'index.html' + sectionId;
       }
     }
