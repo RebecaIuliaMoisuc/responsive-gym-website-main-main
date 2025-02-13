@@ -259,7 +259,7 @@ a {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  
+  /* max-width: 100%; */
   margin: 0 auto;
   padding-top: 1rem;
   padding-bottom: 1 rem;
