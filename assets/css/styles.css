@@ -67,7 +67,7 @@
 }
 
 table  {
-  width: 50vw;
+  width: 30vw;
   border-collapse: separate;  
   border-spacing: 0;  
   margin: 0 auto;
@@ -79,7 +79,7 @@ table  {
 
 .paragraf_ab {
   padding-top: 3rem !important;
-  width: 50vw;
+  width: 55vw;
   margin: 0 auto;
   font-size: var(--h3-font-size);
 }
@@ -89,6 +89,7 @@ table  {
   width: max-content;
   margin: 0 auto;
 }
+
 /* Zebra striping */
 @media only screen and (max-width: 1024px) {
   .paragraf_ab {
@@ -110,7 +111,7 @@ th {
 }
 @media only screen and (max-width: 760px) {
   table {
-    width: 90vw;
+    width: 40vw;
     overflow: hidden;
     border-collapse: separate;
     border-spacing: 0;  
@@ -179,7 +180,7 @@ th {
       overflow-x: scroll;
     }
     table {
-      width: 90vw;
+      width: 70vw;
       overflow: hidden;
       border-collapse: separate;
       border-spacing: 0;  
@@ -259,7 +260,7 @@ a {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  /* max-width: 100%; */
+  max-width: 100%;
   margin: 0 auto;
   padding-top: 1rem;
   padding-bottom: 1 rem;
@@ -270,6 +271,11 @@ a {
   height: 90vh;
 }
 
+@media (min-width: 1540px) {
+  table{
+    width: 30vw;
+  }
+}
 
 .section__data,
 .about-center {
@@ -348,9 +354,10 @@ a {
   align-items: center;
   column-gap: 0.5 rem;
   font-weight: var(--font-bold);
+  font-size: medium;
 }
 .nav__logo img {
-  width: 6.5rem;
+  width: 5.5rem;
   /* margin-left: 0.8rem; */
   margin-right: -15px !important;
 }
@@ -552,9 +559,6 @@ a {
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-
-
 /* Caption text */
 .text {
   color: #f2f2f2;
@@ -606,6 +610,59 @@ a {
     opacity: 1;
   }
 }
+.antrenori-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.antrenor-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 250px;
+}
+
+.antrenor-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.antrenor-content img {
+  border-radius: 50%;
+}
+
+.antrenor-content h3 {
+  margin: 0;
+  font-size: 23px;
+}
+.res_button{
+  width: 70%;
+}
+@media (max-width: 768px) {
+  
+  .antrenori-container {
+      flex-direction: column;
+      align-items: center;
+
+  }
+  .res_button{
+    width: 90%;
+  }
+  
+  .antrenor-content {
+      flex-direction: column;
+  
+      gap: 10px; 
+  }
+}
+
+
 
 .fade {
   @include transition($transition-fade);
@@ -661,8 +718,7 @@ a {
   justify-content: center;
   column-gap: 0.5rem;
   border-radius: 1.9em;
-  margin-bottom: 5em;
-  margin-top: 2rem;
+
 }
 
 a:hover {
@@ -1010,11 +1066,7 @@ i {
 .margin-top {
   margin-top: 3rem !important;
 }
-.formular {
-  width: max-content;
-  margin: 0 auto;
-  padding-top: 2rem;
-}
+
 /*=============== carduri testimoniale  ===============*/
 
 .testimoniale-container {
@@ -1447,11 +1499,8 @@ html::-webkit-scrollbar-thumb:hover {
 @media screen and (max-width: 1024px) {
   .home__data {
     text-align: left;
-    /* Reset text alignment to left when screen width is 1024px or less */
     margin: 0 auto;
-    /* Center the entire div by adding auto margin */
     max-width: 75vw !important;
-    /* Optionally, limit the maximum width for better readability */
     margin-top: 4rem !important;
   }
   .home::before {
@@ -1484,6 +1533,11 @@ html::-webkit-scrollbar-thumb:hover {
     margin-left: 0 !important;
     height: 100vh;
   }
+  .reservations_btn{
+    border: 1px solid var(--first-color) !important;
+    padding: 5px 5px !important;
+    margin-right: 10px ! important;
+  }
 }
 /* For large devices */
 @media screen and (min-width: 1023px) {
@@ -1494,7 +1548,8 @@ html::-webkit-scrollbar-thumb:hover {
     width: initial;
   }
   .nav__toggle,
-  .nav__close {
+  .nav__close,
+  .reservations_btn {
     display: none;
   }
   .nav__list {
@@ -2044,11 +2099,10 @@ html::-webkit-scrollbar-thumb:hover {
     margin-bottom: 40px;
 }
 
-.Container {
-    max-width: 1320px;
-    /* margin-left: 30px; */
+.videoCarousel{
+  width: 90vw;
+  margin-left: 30px;
 }
-
 .leftSide {
   width: 100%;
   max-width:480px;
@@ -2056,35 +2110,40 @@ html::-webkit-scrollbar-thumb:hover {
   display: flex;
   flex-direction: column;
   justify-content: left; 
-  /* margin-right: 2rem !important; */
   margin: 0 auto;
 }
+@media (min-width: 1023px){
+  .leftSide {
+    margin-right: 55px;
+  }
+}
+
 
 .rightSide {
     width: 400px;
     height: 500px;
     margin-top: 20px;
-    margin-left: 30px;
+   
+    margin: 0 auto;
 }
-/* .heading {
-  text-align: center !important;
-} */
+
 @media (max-width: 1024px) {
     .Container {
         flex-direction: column;
+        justify-content: center;
     }
     
     .leftSide {
         align-items: center;
         margin-right: 0;
         margin: 0 auto;
-        width: 75vw;
+     
     }
     
     .rightSide {
         /* width: 90vw; */
         margin-top: 20px;
-        margin-left:10px !important
+       
     }
 }
 @media (min-width: 1023px){
@@ -2316,11 +2375,6 @@ html::-webkit-scrollbar-thumb:hover {
     width: 100%; 
   }
 }
-.contact-form-nou {
-  margin: 0 auto;
-  
-  width: 100%;
-}
 
 /* sectiune locatie si footer */
 .contact-bg-nou {
@@ -2379,8 +2433,6 @@ html::-webkit-scrollbar-thumb:hover {
   font-size: 1rem;
 }
 
-
-
 .contact-body-nou {
   max-width: 1320px;
   margin: 0 auto;
@@ -2418,14 +2470,6 @@ html::-webkit-scrollbar-thumb:hover {
   font-size: var(--h3-font-size);
 }
 
-.contact-form-nou {
-  padding: 2rem 0;
-  border-top: 1px solid var(--first-color);
-}
-
-.contact-form-nou form {
-  padding-bottom: 1rem;
-}
 
 .form-control {
   width: 100%;
@@ -2448,12 +2492,6 @@ html::-webkit-scrollbar-thumb:hover {
   color: #7c7b7b ;
 }
 
-.contact-form-nou form div {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  
-}
-
 .send-btn {
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
@@ -2469,11 +2507,6 @@ html::-webkit-scrollbar-thumb:hover {
 
 .send-btn:hover {
   opacity: 0.8;
-}
-
-.contact-form-nou > div {
-  margin: 0 auto;
-  text-align: center;
 }
 
 .contact-footer {
@@ -2544,11 +2577,6 @@ html::-webkit-scrollbar-thumb:hover {
     width: 600px !important;
     margin: 0 auto;
     
-  }
-  .contact-form-nou {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
   }
 }
 
@@ -3003,9 +3031,7 @@ canvas {
   border-radius: 20px !important;
 }
  
-/* Add this CSS to style the arrows */
 
-/* Style for the arrow buttons */
 .arrow {
   position: absolute;
   top: 50%;
@@ -3094,30 +3120,17 @@ background-color: transparent;
 }
 
 .carousel-control-prev {
-    left: 14px !important;
+    left: 10px ;
 }
 
 .carousel-control-next {
-    right: 30px;
+    right: 7px;
 }
 
-@media (max-width: 1024px) {
-  .carousel {
-      
-      margin-right: auto;
-  }
-  .carousel-control-prev{
-    /* left: 0px !important; */
-  }
-}
 .carousel-inner{
-width: 300px !important;
+width: 281px !important;
 margin: 0 auto !important;
 }
-
-  /* Common styles for carousel arrows */
-
-
 
 
 /* Style the icons inside the arrows */
@@ -3126,8 +3139,8 @@ margin: 0 auto !important;
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-color: transparent; /* Remove any background color */
-    background-image: none; /* Remove any existing background image */
+    
+  
     border: solid #ed1c76;
     border-width: 0 3px 3px 0;
     padding: 3px;
@@ -3160,11 +3173,10 @@ margin: 0 auto !important;
 }
 
 .voucher__image img {
-  max-width: 60%;
+  max-width: 50%;
   height: auto;
   border: 3px solid white !important;
   border-radius: 15px;
-  
 }
 
 .voucher__description {
@@ -3197,9 +3209,165 @@ margin: 0 auto !important;
       text-align: center;
   }
   .voucher__image img {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
- 
-  
 }
+
+}
+
+/* <! ============ CONTACT FORM + MAP ============== !> */
+.form-control::placeholder {
+  color: white !important;
+  opacity: 1; /* Ensures full visibility */
+}
+.contact-form {
+  border-top: 1px solid var(--first-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  padding-bottom: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; 
+ 
+}
+
+.contact-form-nou {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.contact-form form {
+  flex: 1;
+  /* max-width: 50%; */
+  padding-bottom: 1rem;
+}
+
+.contact-form form div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.harta {
+  flex: 1;
+  /* max-width: 50%; */
+  height: 450px;
+  border-radius: 2rem !important;
+  filter: invert(90%);
+  /* padding: 5px; */
+  display: block;
+  align-self: flex-start; 
+  margin-right: 0; 
+  /* padding-top: 20px!important; */
+  box-sizing: border-box!important;
+  padding: 20px 0 20px 20px;
+}
+
+#contact-form {
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 445px;
+}
+
+/* Grupurile de inputuri (nume & prenume, email & telefon) */
+#contact-form>div {
+  display: flex;
+  gap: 10px;
+}
+
+/* Stilizare pentru inputuri */
+.form-control {
+  flex: 1;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+/* Textarea */
+#user-message {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Butonul de submit */
+button.submit-btn {
+  display: block;
+  width: 100%;
+  /* padding: 10px; */
+  cursor: pointer;
+}
+
+
+/* MEDIA CONTACT FORM + MAP */
+@media (max-width: 768px) {
+  .contact-form {
+      flex-direction: column; 
+      align-items: center; 
+  }
+
+  .contact-form-nou {
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .contact-form form, 
+  .harta {
+      max-width: 100%; 
+      width: 100%;
+  }
+
+  .harta {
+     width: 100vw;
+      padding: 10px 0 10px 0; 
+  }
+}
+
+@media (max-width: 600px) {
+  .Container {
+    /* Switch to column layout */
+    flex-direction: column;
+    
+    /* Center child elements horizontally */
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  .leftSide {
+    /* Ensure each block is narrow enough to center nicely */
+    width: 80%;          /* or 75vw, 90%, etc., as you prefer */
+    margin-bottom: 2rem; /* spacing between them */
+    
+    /* If you also want text itself centered, use: */
+    /* text-align: center; */
+  }
+  .rightSide {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .Container {
+    /* Switch to column layout */
+    flex-direction: column;
+    
+    /* Center child elements horizontally */
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  .leftSide {
+    margin-bottom: 2rem; /* spacing between them */
+  }
+  .rightSide {
+    width: 100%;
+  }
+
 }
