@@ -419,7 +419,7 @@ a {
   width: 100%;
   height: 100%;
   background: linear-gradient(rgba(96, 96, 96, 0.366), rgba(43, 43, 43, 0.5)),
-    url("../img/poza23-test.jpg");
+    url("../img/poza23-test.webp");
   background-repeat: no-repeat;
   background-size: auto, cover;
   z-index: -1;
@@ -1235,22 +1235,6 @@ html::-webkit-scrollbar-thumb:hover {
   color: white;
 }
 
-/* .scrollUp {
-  position: fixed;
-  right: 2rem !important;
-  bottom: 2% !important;
-  background-color: var(--first-color);
-  display: inline-flex;
-  padding: 0.35rem;
-  color: white;
-  font-size: var(--z-tooltip);
-  transition: 0.3s;
-  z-index: 100000;
-}
-.scrollUp:hover {
-  transform: translateY(-0.25rem);
-  color: white;
-}
 
 /* Show Scroll Up*/.scrollUp {
   position: fixed;
@@ -1259,43 +1243,43 @@ html::-webkit-scrollbar-thumb:hover {
   background-color: var(--first-color); /* Set the background color to pink */
   display: inline-flex;
   padding: 0.35rem;
-  color: white; /* Set the arrow color to white */
+  color: white; 
   font-size: var(--z-tooltip);
   transition: 0.3s;
   z-index: 100000;
-   /* Optional: Make the button circular */
+
 }
 
 .scrollUp:hover {
   transform: translateY(-0.25rem);
-  color: white; /* Ensure the arrow remains white on hover */
+  color: white;
 }
 
-/* Show Scroll Up */
+
 .show-scroll {
   bottom: 3rem;
 }
 
-/* Media queries for different screen sizes */
+
 @media (max-width: 768px) {
   .scrollUp {
-    right: 1rem; /* Adjust the distance for smaller screens */
-    bottom: 1.5rem; /* Adjust the distance for smaller screens */
+    right: 1rem; 
+    bottom: 1.5rem; 
   }
 
   .show-scroll {
-    bottom: 2.5rem; /* Adjust the distance for smaller screens */
+    bottom: 2.5rem; 
   }
 }
 
 @media (max-width: 480px) {
   .scrollUp {
-    right: 1rem; /* Adjust the distance for very small screens */
-    bottom: 0.7rem; /* Adjust the distance for very small screens */
+    right: 1rem; 
+    bottom: 0.7rem; 
   }
 
   .show-scroll {
-    bottom: 1.5rem; /* Adjust the distance for very small screens */
+    bottom: 1.5rem;
   }
 }
 
@@ -1303,18 +1287,18 @@ html::-webkit-scrollbar-thumb:hover {
 /*=============== BREAKPOINTS ===============*/
 
 .section-center.about-center.margin {
-  max-width: 1200px; /* sau oricare altă valoare potrivită pentru design-ul tău */
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .section-center.about-img {
-  max-width: 1200px; /* sau oricare altă valoare potrivită pentru design-ul tău */
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 768px) {
   .section-center.about-center.margin {
-    max-width: 90%; /* sau oricare altă valoare potrivită pentru design-ul tău pe ecrane mici */
+    max-width: 90%; 
     margin: 0 auto;
   }
 
@@ -1455,15 +1439,11 @@ html::-webkit-scrollbar-thumb:hover {
   }
 }
 
-/* pentru width < 1024 */
 @media screen and (max-width: 1024px) {
   .home__data {
     text-align: left;
-    /* Reset text alignment to left when screen width is 1024px or less */
     margin: 0 auto;
-    /* Center the entire div by adding auto margin */
     max-width: 75vw !important;
-    /* Optionally, limit the maximum width for better readability */
     margin-top: 4rem !important;
   }
   .home::before {
@@ -1474,14 +1454,11 @@ html::-webkit-scrollbar-thumb:hover {
     width: 100%;
     height: 100%;
     background: linear-gradient(rgba(46, 46, 46, 0.366), rgba(43, 43, 43, 0.5)),
-      url("../img/poza23.jpg");
+      url("../img/poza23.webp");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
     opacity: 0.4;
-    /* Place the overlay behind the content */
-
-    /* Adjust the opacity as needed */
   }
   .home__title {
     text-wrap: balance;
@@ -3183,4 +3160,110 @@ margin: 0 auto !important;
 .carousel-control-next-icon {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
+}
+
+.voucher {
+  text-align: center;
+  padding: 50px 0;
+
+}
+
+.voucher__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.voucher__image img {
+  max-width: 60%;
+  height: auto;
+  border: 3px solid white !important;
+  border-radius: 15px;
+
+}
+
+.voucher__description {
+  max-width: 50vw;
+  text-align: left;
+}
+
+.voucher__description p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.voucher__description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.voucher__description li {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+
+@media (max-width: 768px) {
+  .voucher__content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .voucher__description {
+      text-align: center;
+  }
+
+  .voucher__image img {
+      max-width: 80%;
+      height: auto;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content {
+  background-color: white;
+  margin: 5% auto;
+  width: 70%;
+  height: 87%;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.close {
+  color: black;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: right;
+  padding: 10px;
+}
+
+.close:hover {
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+  .modal-content {
+      width: 100vw !important;
+      height: 100%;
+      margin: 0 auto;
+      border-radius: 0;
+  }
+}
+
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }
