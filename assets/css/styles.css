@@ -180,7 +180,6 @@ th {
                 
 .paragraf_ab {
   list-style: none;
-  /* Remove default bullets */
 }
 
 .subtitlu {
@@ -194,7 +193,6 @@ th {
   font-weight: bold;
   display: inline-block;
   width: 1em;
-  margin-left: -1em;
 }
 /*=============== BASE ===============*/
 * {
